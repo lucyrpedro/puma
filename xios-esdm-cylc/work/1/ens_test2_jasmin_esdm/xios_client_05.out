@@ -1,0 +1,330 @@
+-> info : Register new Context : xios_test
+-> info : update step : 0 timestep 3600s
+-> info : Event 0 of context xios_test
+-> info : Event 1 of context xios_test
+-> info : Event 2 of context xios_test
+-> info : Event 3 of context xios_test
+-> info : Event 4 of context xios_test
+-> info : Event 5 of context xios_test
+-> info : Event 6 of context xios_test
+-> info : Event 7 of context xios_test
+-> info : Event 8 of context xios_test
+-> info : Event 9 of context xios_test
+-> info : Event 10 of context xios_test
+-> info : Event 11 of context xios_test
+-> info : Event 12 of context xios_test
+-> info : Event 13 of context xios_test
+-> info : Event 14 of context xios_test
+-> info : Event 15 of context xios_test
+-> info : Event 16 of context xios_test
+-> info : Event 17 of context xios_test
+-> info : Event 18 of context xios_test
+-> info : Event 19 of context xios_test
+-> info : Event 20 of context xios_test
+-> info : Event 21 of context xios_test
+-> info : Event 22 of context xios_test
+-> info : Event 23 of context xios_test
+-> info : Event 24 of context xios_test
+-> info : Event 25 of context xios_test
+-> info : Event 26 of context xios_test
+-> info : Event 27 of context xios_test
+-> info : Event 28 of context xios_test
+-> info : Event 29 of context xios_test
+-> info : Event 30 of context xios_test
+-> info : Event 31 of context xios_test
+-> info : Event 32 of context xios_test
+-> info : Event 33 of context xios_test
+-> info : Event 34 of context xios_test
+-> info : Event 35 of context xios_test
+-> info : Event 36 of context xios_test
+-> info : Event 37 of context xios_test
+-> info : Event 38 of context xios_test
+-> info : Event 39 of context xios_test
+-> info : Event 40 of context xios_test
+-> info : Event 41 of context xios_test
+-> info : Event 42 of context xios_test
+-> info : Event 43 of context xios_test
+-> info : Event 44 of context xios_test
+-> info : Event 45 of context xios_test
+-> info : Event 46 of context xios_test
+-> info : Event 47 of context xios_test
+-> info : Event 48 of context xios_test
+-> info : Event 49 of context xios_test
+-> info : Event 50 of context xios_test
+-> info : Event 51 of context xios_test
+-> info : Event 52 of context xios_test
+-> info : Event 53 of context xios_test
+-> info : Event 54 of context xios_test
+-> info : Event 55 of context xios_test
+-> info : Event 56 of context xios_test
+-> info : Event 57 of context xios_test
+-> info : Event 58 of context xios_test
+-> info : Event 59 of context xios_test
+-> info : Event 60 of context xios_test
+-> info : Event 61 of context xios_test
+-> info : Event 62 of context xios_test
+-> info : Event 63 of context xios_test
+-> info : Event 64 of context xios_test
+-> info : Event 65 of context xios_test
+-> info : Event 66 of context xios_test
+-> info : Event 67 of context xios_test
+-> info : Event 68 of context xios_test
+-> info : Event 69 of context xios_test
+-> info : Event 70 of context xios_test
+-> info : Event 71 of context xios_test
+-> info : Event 72 of context xios_test
+-> info : Event 73 of context xios_test
+-> info : Event 74 of context xios_test
+-> info : Event 75 of context xios_test
+-> info : Event 76 of context xios_test
+-> info : Event 77 of context xios_test
+-> info : Event 78 of context xios_test
+-> info : Event 79 of context xios_test
+-> info : Event 80 of context xios_test
+-> info : Event 81 of context xios_test
+-> info : Event 82 of context xios_test
+-> info : Event 83 of context xios_test
+-> info : Event 84 of context xios_test
+-> info : Event 85 of context xios_test
+-> info : Event 86 of context xios_test
+-> info : Event 87 of context xios_test
+-> info : Event 88 of context xios_test
+-> info : Event 89 of context xios_test
+-> info : Event 90 of context xios_test
+-> info : Event 91 of context xios_test
+-> info : Event 92 of context xios_test
+-> info : Event 93 of context xios_test
+-> info : Event 94 of context xios_test
+-> info : Event 95 of context xios_test
+-> info : Event 96 of context xios_test
+-> info : Event 97 of context xios_test
+-> info : Event 98 of context xios_test
+-> info : Event 99 of context xios_test
+-> info : Event 100 of context xios_test
+-> info : Event 101 of context xios_test
+-> info : Event 102 of context xios_test
+-> info : Event 103 of context xios_test
+-> info : Event 104 of context xios_test
+-> info : Event 105 of context xios_test
+-> info : Event 106 of context xios_test
+-> info : Event 107 of context xios_test
+-> info : Event 108 of context xios_test
+-> info : Event 109 of context xios_test
+-> info : Event 110 of context xios_test
+-> info : Event 111 of context xios_test
+-> info : Event 112 of context xios_test
+-> info : Event 113 of context xios_test
+-> info : Event 114 of context xios_test
+-> info : Event 115 of context xios_test
+-> info : Event 116 of context xios_test
+-> info : Event 117 of context xios_test
+-> info : Event 118 of context xios_test
+-> info : Event 119 of context xios_test
+-> info : Event 120 of context xios_test
+-> info : Event 121 of context xios_test
+-> info : Event 122 of context xios_test
+-> info : Event 123 of context xios_test
+-> info : Event 124 of context xios_test
+-> info : Event 125 of context xios_test
+-> info : Event 126 of context xios_test
+-> info : Event 127 of context xios_test
+-> info : Event 128 of context xios_test
+-> info : Event 129 of context xios_test
+-> info : Event 130 of context xios_test
+-> info : Event 131 of context xios_test
+-> info : Event 132 of context xios_test
+-> info : Event 133 of context xios_test
+-> info : Event 134 of context xios_test
+-> info : Event 135 of context xios_test
+-> info : Event 136 of context xios_test
+-> info : Event 137 of context xios_test
+-> info : Event 138 of context xios_test
+-> info : Event 139 of context xios_test
+-> info : Event 140 of context xios_test
+-> info : Event 141 of context xios_test
+-> info : Event 142 of context xios_test
+-> info : Event 143 of context xios_test
+-> info : Event 144 of context xios_test
+-> info : Event 145 of context xios_test
+-> info : Event 146 of context xios_test
+-> info : Event 147 of context xios_test
+-> info : Event 148 of context xios_test
+-> info : Event 149 of context xios_test
+-> info : Event 150 of context xios_test
+-> info : Event 151 of context xios_test
+-> info : Event 152 of context xios_test
+-> info : Event 153 of context xios_test
+-> info : Event 154 of context xios_test
+-> info : Event 155 of context xios_test
+-> info : CClientBuffer: allocated 2 x 9056 bytes for server 3 with a maximum of 4 buffered events
+-> info : CClientBuffer: allocated 2 x 9056 bytes for server 2 with a maximum of 4 buffered events
+-> info : CClientBuffer: allocated 2 x 2898924 bytes for server 0 with a maximum of 4 buffered events
+-> info : CClientBuffer: allocated 2 x 2820588 bytes for server 1 with a maximum of 4 buffered events
+-> info : Event 155 of context xios_test  sent
+-> info : Event 156 of context xios_test
+-> info : Event 157 of context xios_test
+-> info : Event 157 of context xios_test  sent
+-> info : Event 158 of context xios_test
+-> info : Event 158 of context xios_test  sent
+-> info : Event 159 of context xios_test
+-> info : Event 159 of context xios_test  sent
+-> info : Event 160 of context xios_test
+-> info : Event 160 of context xios_test  sent
+-> info : Event 161 of context xios_test
+-> info : Event 162 of context xios_test
+-> info : Event 163 of context xios_test
+-> info : Event 164 of context xios_test
+-> info : Event 164 of context xios_test  sent
+-> info : Event 165 of context xios_test
+-> info : Event 165 of context xios_test  sent
+-> info : Event 166 of context xios_test
+-> info : Event 166 of context xios_test  sent
+-> info : Event 167 of context xios_test
+-> info : Event 167 of context xios_test  sent
+-> info : Event 168 of context xios_test
+-> info : Event 169 of context xios_test
+-> info : Event 169 of context xios_test  sent
+-> info : Event 170 of context xios_test
+-> info : Event 170 of context xios_test  sent
+-> info : Event 171 of context xios_test
+-> info : Event 172 of context xios_test
+-> info : Event 173 of context xios_test
+-> info : Event 174 of context xios_test
+-> info : updateCalendar : before : 0000-01-01 00:00:00
+-> info : update step : 1 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 01:00:00
+-> info : Event 175 of context xios_test
+-> info : Event 176 of context xios_test
+-> info : Event 176 of context xios_test  sent
+-> info : Event 177 of context xios_test
+-> info : Event 177 of context xios_test  sent
+-> info : Event 178 of context xios_test
+-> info : Event 178 of context xios_test  sent
+-> info : Event 179 of context xios_test
+-> info : Event 179 of context xios_test  sent
+-> info : Event 180 of context xios_test
+-> info : Event 180 of context xios_test  sent
+-> info : Event 181 of context xios_test
+-> info : Event 181 of context xios_test  sent
+-> info : updateCalendar : before : 0000-01-01 01:00:00
+-> info : update step : 2 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 02:00:00
+-> info : Event 182 of context xios_test
+-> info : Event 183 of context xios_test
+-> info : Event 183 of context xios_test  sent
+-> info : Event 184 of context xios_test
+-> info : Event 184 of context xios_test  sent
+-> info : Event 185 of context xios_test
+-> info : Event 185 of context xios_test  sent
+-> info : Event 186 of context xios_test
+-> info : Event 186 of context xios_test  sent
+-> info : Event 187 of context xios_test
+-> info : Event 187 of context xios_test  sent
+-> info : Event 188 of context xios_test
+-> info : Event 188 of context xios_test  sent
+-> info : updateCalendar : before : 0000-01-01 02:00:00
+-> info : update step : 3 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 03:00:00
+-> info : Event 189 of context xios_test
+-> info : Event 190 of context xios_test
+-> info : Event 190 of context xios_test  sent
+-> info : Event 191 of context xios_test
+-> info : Event 191 of context xios_test  sent
+-> info : Event 192 of context xios_test
+-> info : Event 192 of context xios_test  sent
+-> info : Event 193 of context xios_test
+-> info : Event 193 of context xios_test  sent
+-> info : Event 194 of context xios_test
+-> info : Event 194 of context xios_test  sent
+-> info : Event 195 of context xios_test
+-> info : Event 195 of context xios_test  sent
+-> info : updateCalendar : before : 0000-01-01 03:00:00
+-> info : update step : 4 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 04:00:00
+-> info : Event 196 of context xios_test
+-> info : Event 197 of context xios_test
+-> info : Event 197 of context xios_test  sent
+-> info : Event 198 of context xios_test
+-> info : Event 198 of context xios_test  sent
+-> info : Event 199 of context xios_test
+-> info : Event 199 of context xios_test  sent
+-> info : Event 200 of context xios_test
+-> info : Event 200 of context xios_test  sent
+-> info : Event 201 of context xios_test
+-> info : Event 201 of context xios_test  sent
+-> info : Event 202 of context xios_test
+-> info : Event 202 of context xios_test  sent
+-> info : updateCalendar : before : 0000-01-01 04:00:00
+-> info : update step : 5 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 05:00:00
+-> info : Event 203 of context xios_test
+-> info : Event 204 of context xios_test
+-> info : Event 204 of context xios_test  sent
+-> info : Event 205 of context xios_test
+-> info : Event 205 of context xios_test  sent
+-> info : Event 206 of context xios_test
+-> info : Event 206 of context xios_test  sent
+-> info : Event 207 of context xios_test
+-> info : Event 207 of context xios_test  sent
+-> info : Event 208 of context xios_test
+-> info : Event 208 of context xios_test  sent
+-> info : Event 209 of context xios_test
+-> info : Event 209 of context xios_test  sent
+-> info : updateCalendar : before : 0000-01-01 05:00:00
+-> info : update step : 6 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 06:00:00
+-> info : Event 210 of context xios_test
+-> info : Event 211 of context xios_test
+-> info : Event 211 of context xios_test  sent
+-> info : Event 212 of context xios_test
+-> info : Event 212 of context xios_test  sent
+-> info : Event 213 of context xios_test
+-> info : Event 213 of context xios_test  sent
+-> info : Event 214 of context xios_test
+-> info : Event 214 of context xios_test  sent
+-> info : Event 215 of context xios_test
+-> info : Event 215 of context xios_test  sent
+-> info : Event 216 of context xios_test
+-> info : Event 216 of context xios_test  sent
+-> info : Event 217 of context xios_test
+-> info : Event 218 of context xios_test
+-> report :  Memory report : Context <xios_test> : client side : memory used for buffer of each connection to server
+  +) To server with rank 0 : 2898924 bytes 
+-> report :  Memory report : Context <xios_test> : client side : memory used for buffer of each connection to server
+  +) To server with rank 1 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test> : client side : memory used for buffer of each connection to server
+  +) To server with rank 2 : 9056 bytes 
+-> report :  Memory report : Context <xios_test> : client side : memory used for buffer of each connection to server
+  +) To server with rank 3 : 9056 bytes 
+-> report :  Memory report : Context <xios_test> : client side : total memory used for buffer 5737624 bytes
+-> info :  CContextServer: Receive context <xios_test> finalize.
+-> report :  Memory report : Context <xios_test> : server side : memory used for buffer of each connection to client
+  +) With client of rank 1 : 470095 bytes 
+-> report :  Memory report : Context <xios_test> : server side : total memory used for buffer 470095 bytes
+-> info : CContext: Context <xios_test> is finalized.
+-> info : Client side context is finalized
+-> report :  Performance report : Whole time from XIOS init and finalize: 4.04943 s
+-> report :  Performance report : total time spent for XIOS : 4.01071 s
+-> report :  Performance report : time spent for waiting free buffer : 0.856597 s
+-> report :  Performance report : Ratio : 21.1535 %
+-> report :  Performance report : This ratio must be close to zero. Otherwise it may be usefull to increase buffer size or numbers of server
+-> report :  Memory report : Minimum buffer size required : 483138 bytes
+-> report :  Memory report : increasing it by a factor will increase performance, depending of the volume of data wrote in file at each time step of the file
+-> report : Timer : Blocking time    -->   cumulated time : 0.856597
+Timer : CSpatialTransformFilterEngine::apply    -->   cumulated time : 0.148126
+Timer : Context : close definition    -->   cumulated time : 1.02982
+Timer : Field : send data    -->   cumulated time : 0.895675
+Timer : Process events    -->   cumulated time : 2.12181e-05
+Timer : Process request    -->   cumulated time : 4.15207e-06
+Timer : XIOS    -->   cumulated time : 4.01071
+Timer : XIOS close definition    -->   cumulated time : 1.02982
+Timer : XIOS context finalize    -->   cumulated time : 0.880912
+Timer : XIOS finalize    -->   cumulated time : 0
+Timer : XIOS init    -->   cumulated time : 0
+Timer : XIOS init context    -->   cumulated time : 0.0173588
+Timer : XIOS init/finalize    -->   cumulated time : 4.04943
+Timer : XIOS send field    -->   cumulated time : 1.04999
+Timer : computeGlobalSourceIndex    -->   cumulated time : 0.575733
+Timer : computeIndexSourceMapping    -->   cumulated time : 1.38769e-05
+Timer : computeTransformationMapping    -->   cumulated time : 0.266105
+

@@ -1,0 +1,15 @@
+&input
+  do_regrid = .FALSE.,
+  do_ens = .TRUE.,
+  infile_data_base = 'input_data_ens',
+  verbose = 1,
+  write_output = .FALSE.,
+  nprocx = 2,
+  nprocy = 2,
+  nt = 6,
+  ncopies = 2
+/
+
+&input_ens
+  num_ens = 3
+/

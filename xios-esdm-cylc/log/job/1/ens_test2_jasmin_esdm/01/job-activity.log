@@ -1,0 +1,9 @@
+[jobs-submit ret_code] 0
+[jobs-submit out] 2020-05-21T12:55:00+01:00|1/ens_test2_jasmin_esdm/01|0|1179086
+2020-05-21T12:55:00+01:00 [STDOUT] Job <1179086> is submitted to queue <par-multi>.
+[jobs-submit ret_code] 0
+[jobs-submit out] 2020-05-21T13:59:14+01:00|1/ens_test2_jasmin_esdm/01|0|1186150
+2020-05-21T13:59:14+01:00 [STDOUT] Job <1186150> is submitted to queue <par-multi>.
+[jobs-submit ret_code] 0
+[jobs-submit out] 2020-05-21T14:02:32+01:00|1/ens_test2_jasmin_esdm/01|0|1187942
+2020-05-21T14:02:32+01:00 [STDOUT] Job <1187942> is submitted to queue <par-multi>.
