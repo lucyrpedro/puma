@@ -1,0 +1,366 @@
+-> info : CServer : Register new Context : xios_test_server
+-> info : attribut recu timestep  -> info : --> empty
+-> info : attribut recu timestep  -> info : 
+-> info : attribut recu type  -> info : --> empty
+-> info : attribut recu type  -> info : 
+-> info : attribut recu format  -> info : --> empty
+-> info : attribut recu format  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu output_freq  -> info : --> empty
+-> info : attribut recu output_freq  -> info : 
+-> info : attribut recu time_counter  -> info : --> empty
+-> info : attribut recu time_counter  -> info : 
+-> info : attribut recu type  -> info : --> empty
+-> info : attribut recu type  -> info : 
+-> info : attribut recu format  -> info : --> empty
+-> info : attribut recu format  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu output_freq  -> info : --> empty
+-> info : attribut recu output_freq  -> info : 
+-> info : attribut recu time_counter  -> info : --> empty
+-> info : attribut recu time_counter  -> info : 
+-> info : attribut recu type  -> info : --> empty
+-> info : attribut recu type  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu standard_name  -> info : --> empty
+-> info : attribut recu standard_name  -> info : 
+-> info : attribut recu unit  -> info : --> empty
+-> info : attribut recu unit  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu standard_name  -> info : --> empty
+-> info : attribut recu standard_name  -> info : 
+-> info : attribut recu unit  -> info : --> empty
+-> info : attribut recu unit  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu check_if_active  -> info : --> empty
+-> info : attribut recu check_if_active  -> info : 
+-> info : attribut recu default_value  -> info : --> empty
+-> info : attribut recu default_value  -> info : 
+-> info : attribut recu field_ref  -> info : --> empty
+-> info : attribut recu field_ref  -> info : 
+-> info : attribut recu freq_offset  -> info : --> empty
+-> info : attribut recu freq_offset  -> info : 
+-> info : attribut recu freq_op  -> info : --> empty
+-> info : attribut recu freq_op  -> info : 
+-> info : attribut recu grid_ref  -> info : --> empty
+-> info : attribut recu grid_ref  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu operation  -> info : --> empty
+-> info : attribut recu operation  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu axis_domain_order  -> info : --> empty
+-> info : attribut recu axis_domain_order  -> info : 
+-> info : attribut recu data_dim  -> info : --> empty
+-> info : attribut recu data_dim  -> info : 
+-> info : attribut recu domain_ref  -> info : --> empty
+-> info : attribut recu domain_ref  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu ni_glo  -> info : --> empty
+-> info : attribut recu ni_glo  -> info : 
+-> info : attribut recu nj_glo  -> info : --> empty
+-> info : attribut recu nj_glo  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu type  -> info : --> empty
+-> info : attribut recu type  -> info : 
+-> info : attribut recu axis_ref  -> info : --> empty
+-> info : attribut recu axis_ref  -> info : 
+-> info : attribut recu begin  -> info : --> empty
+-> info : attribut recu begin  -> info : 
+-> info : attribut recu data_begin  -> info : --> empty
+-> info : attribut recu data_begin  -> info : 
+-> info : attribut recu data_index  -> info : --> empty
+-> info : attribut recu data_index  -> info : 
+-> info : attribut recu data_n  -> info : --> empty
+-> info : attribut recu data_n  -> info : 
+-> info : attribut recu index  -> info : --> empty
+-> info : attribut recu index  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu mask  -> info : --> empty
+-> info : attribut recu mask  -> info : 
+-> info : attribut recu n  -> info : --> empty
+-> info : attribut recu n  -> info : 
+-> info : attribut recu n_glo  -> info : --> empty
+-> info : attribut recu n_glo  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu positive  -> info : --> empty
+-> info : attribut recu positive  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu standard_name  -> info : --> empty
+-> info : attribut recu standard_name  -> info : 
+-> info : attribut recu unit  -> info : --> empty
+-> info : attribut recu unit  -> info : 
+-> info : attribut recu value  -> info : --> empty
+-> info : attribut recu value  -> info : 
+-> info : attribut recu axis_ref  -> info : --> empty
+-> info : attribut recu axis_ref  -> info : 
+-> info : attribut recu begin  -> info : --> empty
+-> info : attribut recu begin  -> info : 
+-> info : attribut recu data_begin  -> info : --> empty
+-> info : attribut recu data_begin  -> info : 
+-> info : attribut recu data_index  -> info : --> empty
+-> info : attribut recu data_index  -> info : 
+-> info : attribut recu data_n  -> info : --> empty
+-> info : attribut recu data_n  -> info : 
+-> info : attribut recu index  -> info : --> empty
+-> info : attribut recu index  -> info : 
+-> info : attribut recu mask  -> info : --> empty
+-> info : attribut recu mask  -> info : 
+-> info : attribut recu n  -> info : --> empty
+-> info : attribut recu n  -> info : 
+-> info : attribut recu n_glo  -> info : --> empty
+-> info : attribut recu n_glo  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu axis_domain_order  -> info : --> empty
+-> info : attribut recu axis_domain_order  -> info : 
+-> info : attribut recu data_dim  -> info : --> empty
+-> info : attribut recu data_dim  -> info : 
+-> info : attribut recu domain_ref  -> info : --> empty
+-> info : attribut recu domain_ref  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu ni_glo  -> info : --> empty
+-> info : attribut recu ni_glo  -> info : 
+-> info : attribut recu nj_glo  -> info : --> empty
+-> info : attribut recu nj_glo  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu type  -> info : --> empty
+-> info : attribut recu type  -> info : 
+-> info : attribut recu axis_ref  -> info : --> empty
+-> info : attribut recu axis_ref  -> info : 
+-> info : attribut recu begin  -> info : --> empty
+-> info : attribut recu begin  -> info : 
+-> info : attribut recu data_begin  -> info : --> empty
+-> info : attribut recu data_begin  -> info : 
+-> info : attribut recu data_index  -> info : --> empty
+-> info : attribut recu data_index  -> info : 
+-> info : attribut recu data_n  -> info : --> empty
+-> info : attribut recu data_n  -> info : 
+-> info : attribut recu index  -> info : --> empty
+-> info : attribut recu index  -> info : 
+-> info : attribut recu long_name  -> info : --> empty
+-> info : attribut recu long_name  -> info : 
+-> info : attribut recu mask  -> info : --> empty
+-> info : attribut recu mask  -> info : 
+-> info : attribut recu n  -> info : --> empty
+-> info : attribut recu n  -> info : 
+-> info : attribut recu n_glo  -> info : --> empty
+-> info : attribut recu n_glo  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : attribut recu positive  -> info : --> empty
+-> info : attribut recu positive  -> info : 
+-> info : attribut recu prec  -> info : --> empty
+-> info : attribut recu prec  -> info : 
+-> info : attribut recu standard_name  -> info : --> empty
+-> info : attribut recu standard_name  -> info : 
+-> info : attribut recu unit  -> info : --> empty
+-> info : attribut recu unit  -> info : 
+-> info : attribut recu value  -> info : --> empty
+-> info : attribut recu value  -> info : 
+-> info : attribut recu name  -> info : --> empty
+-> info : attribut recu name  -> info : 
+-> info : If domain in does not have overlapped regions between processes something must be wrong with longitude index 
+-> info : If domain in does not have overlapped regions between processes something must be wrong with latitude index 
+-> info : If domain in does not have overlapped regions between processes something must be wrong with longitude index 
+-> info : If domain in does not have overlapped regions between processes something must be wrong with latitude index 
+-> info : update step : 0 timestep 3600s
+-> info : updateCalendar : before : 0000-01-01 00:00:00
+-> info : update step : 1 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 01:00:00
+-> info : updateCalendar : before : 0000-01-01 01:00:00
+-> info : update step : 2 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 02:00:00
+-> info : updateCalendar : before : 0000-01-01 02:00:00
+-> info : update step : 3 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 03:00:00
+-> info : updateCalendar : before : 0000-01-01 03:00:00
+-> info : update step : 4 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 04:00:00
+-> info : updateCalendar : before : 0000-01-01 04:00:00
+-> info : update step : 5 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 05:00:00
+-> info : updateCalendar : before : 0000-01-01 05:00:00
+-> info : update step : 6 timestep 3600s
+-> info : updateCalendar : after : 0000-01-01 06:00:00
+-> info :  CContextServer: Receive context <xios_test_server> finalize.
+-> info : DEBUG: context xios_test_server Send client finalize<<
+-> info : DEBUG : Sent context Finalize event to rank 6
+-> info : DEBUG : Sent context Finalize event to rank 7
+-> info : DEBUG : Sent context Finalize event to rank 8
+-> info : Event 0 of context xios_test_server
+-> info : CClientBuffer: allocated 2 x 470095 bytes for server 6 with a maximum of 4 buffered events
+-> info : CClientBuffer: allocated 2 x 470095 bytes for server 7 with a maximum of 4 buffered events
+-> info : CClientBuffer: allocated 2 x 27737 bytes for server 8 with a maximum of 4 buffered events
+-> info : Event 0 of context xios_test_server  sent
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 2 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 3 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 6 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 7 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 8 : 27737 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 10 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : memory used for buffer of each connection to server
+  +) To server with rank 11 : 470095 bytes 
+-> report :  Memory report : Context <xios_test_server> : client side : total memory used for buffer 2848307 bytes
+-> info : Closing File : output
+-> info : Closing File : output_ens
+-> info : CContext: Context <xios_test_server> is finalized.
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 0 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 1 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 2 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 3 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 4 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 5 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 6 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 7 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 8 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 9 : 9056 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 10 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : memory used for buffer of each connection to client
+  +) With client of rank 11 : 2820588 bytes 
+-> report :  Memory report : Context <xios_test_server> : server side : total memory used for buffer 16977864 bytes
+-> report : Performance report : Time spent for XIOS : 3.05541
+-> report : Performance report : Time spent in processing events : 1.66968
+-> report : Performance report : Ratio : 54.6466%
+-> report : Timer : Blocking time    -->   cumulated time : 9.83523e-06
+Timer : Context : close definition    -->   cumulated time : 2.67606e-05
+Timer : Field : recv data    -->   cumulated time : 1.40673
+Timer : Files : close    -->   cumulated time : 0.0374743
+Timer : Files : create    -->   cumulated time : 0.00841235
+Timer : Files : create headers    -->   cumulated time : 0.192545
+Timer : Files : get data infos    -->   cumulated time : 0.00055139
+Timer : Files : writing data    -->   cumulated time : 0.634766
+Timer : Files : writing time axis    -->   cumulated time : 0.34006
+Timer : Process events    -->   cumulated time : 1.66968
+Timer : Process request    -->   cumulated time : 0.000576667
+Timer : XIOS    -->   cumulated time : 4.08732
+Timer : XIOS server    -->   cumulated time : 3.05541
+

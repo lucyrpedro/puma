@@ -1,0 +1,21 @@
+2020-05-21T12:53:51+01:00 INFO - Suite server: url=https://host292.jc.rl.ac.uk:43073/ pid=27117
+2020-05-21T12:53:51+01:00 INFO - Run: (re)start=0 log=1
+2020-05-21T12:53:51+01:00 INFO - Cylc version: 7.8.1
+2020-05-21T12:53:51+01:00 INFO - Run mode: live
+2020-05-21T12:53:51+01:00 INFO - Initial point: 1
+2020-05-21T12:53:51+01:00 INFO - Final point: 1
+2020-05-21T12:53:51+01:00 INFO - Cold Start 1
+2020-05-21T12:55:00+01:00 INFO - [ens_test2_jasmin_esdm.1] -submit-num=1, owner@host=localhost
+2020-05-21T12:55:01+01:00 INFO - [ens_test2_jasmin_esdm.1] -(current:ready) submitted at 2020-05-21T12:55:00+01:00
+2020-05-21T12:55:01+01:00 INFO - [ens_test2_jasmin_esdm.1] -health check settings: submission timeout=None
+2020-05-21T12:55:19+01:00 INFO - [ens_test2_jasmin_esdm.1] -(current:submitted)> started at 2020-05-21T12:55:17+01:00
+2020-05-21T12:55:19+01:00 INFO - [ens_test2_jasmin_esdm.1] -health check settings: execution timeout=PT20M, polling intervals=PT11M,PT2M,PT7M,...
+2020-05-21T12:55:20+01:00 CRITICAL - [ens_test2_jasmin_esdm.1] -(current:running)> failed/EXIT at 2020-05-21T12:55:19+01:00
+2020-05-21T12:55:20+01:00 CRITICAL - [ens_test2_jasmin_esdm.1] -job(01) failed
+2020-05-21T12:55:21+01:00 WARNING - suite stalled
+2020-05-21T13:58:23+01:00 INFO - [client-command] stop_now glister@host292.jc.rl.ac.uk:cylc-stop 3e8b6477-9506-47bd-a034-b08d160c6bef
+2020-05-21T13:58:24+01:00 INFO - Command succeeded: stop_now(terminate=True)
+2020-05-21T13:58:24+01:00 INFO - Processing 1 queued command(s)
+	+	stop_now(terminate=True)
+2020-05-21T13:58:24+01:00 INFO - Suite shutting down - REQUEST(NOW-NOW)
+2020-05-21T13:58:24+01:00 INFO - DONE

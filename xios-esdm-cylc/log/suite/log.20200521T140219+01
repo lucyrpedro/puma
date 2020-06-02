@@ -1,0 +1,15 @@
+2020-05-21T14:02:19+01:00 INFO - Suite server: url=https://host292.jc.rl.ac.uk:43022/ pid=41376
+2020-05-21T14:02:19+01:00 INFO - Run: (re)start=0 log=1
+2020-05-21T14:02:19+01:00 INFO - Cylc version: 7.8.1
+2020-05-21T14:02:19+01:00 INFO - Run mode: live
+2020-05-21T14:02:19+01:00 INFO - Initial point: 1
+2020-05-21T14:02:19+01:00 INFO - Final point: 1
+2020-05-21T14:02:19+01:00 INFO - Cold Start 1
+2020-05-21T14:02:19+01:00 INFO - [ens_test2_jasmin_esdm.1] -submit-num=1, owner@host=localhost
+2020-05-21T14:02:33+01:00 INFO - [ens_test2_jasmin_esdm.1] -(current:ready) submitted at 2020-05-21T14:02:32+01:00
+2020-05-21T14:02:33+01:00 INFO - [ens_test2_jasmin_esdm.1] -health check settings: submission timeout=None
+2020-05-21T14:02:50+01:00 INFO - [ens_test2_jasmin_esdm.1] -(current:submitted)> started at 2020-05-21T14:02:49+01:00
+2020-05-21T14:02:50+01:00 INFO - [ens_test2_jasmin_esdm.1] -health check settings: execution timeout=PT20M, polling intervals=PT11M,PT2M,PT7M,...
+2020-05-21T14:03:00+01:00 INFO - [ens_test2_jasmin_esdm.1] -(current:running)> succeeded at 2020-05-21T14:03:00+01:00
+2020-05-21T14:03:00+01:00 INFO - Suite shutting down - AUTOMATIC
+2020-05-21T14:03:04+01:00 INFO - DONE

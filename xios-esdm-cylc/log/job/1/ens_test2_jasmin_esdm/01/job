@@ -1,0 +1,80 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: xios-esdm-cylc/
+# Task: ens_test2_jasmin_esdm.1
+# Job log directory: 1/ens_test2_jasmin_esdm/01
+# Job submit method: lsf
+# Execution time limit: 600.0
+
+# DIRECTIVES:
+#BSUB -J xios-esdm-cylc/.ens_test2_jasmin_esdm.1
+#BSUB -o /home/users/glister/cylc-run/xios-esdm-cylc/log/job/1/ens_test2_jasmin_esdm/01/job.out
+#BSUB -e /home/users/glister/cylc-run/xios-esdm-cylc/log/job/1/ens_test2_jasmin_esdm/01/job.err
+#BSUB -W 10
+#BSUB -n 16
+#BSUB -q par-multi
+export CYLC_DIR='/home/users/rshatcher/software/cylc-7.8.1'
+export CYLC_VERSION='7.8.1'
+CYLC_FAIL_SIGNALS='EXIT ERR XCPU TERM INT SIGUSR2'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="integer"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="1"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="1"
+    export CYLC_SUITE_NAME="xios-esdm-cylc/"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="/home/users/glister/cylc-run/xios-esdm-cylc/"
+    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/xios-esdm-cylc"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/users/glister/cylc-run/xios-esdm-cylc"
+    export CYLC_SUITE_UUID="ded198d6-26cc-4f0c-ac3a-10da823e9dd3"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="1/ens_test2_jasmin_esdm/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root batch ens_test2_jasmin_esdm"
+    export CYLC_TASK_DEPENDENCIES=""
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export XIOS_EXEC MODEL_EXEC INPUT_DATA_NML INPUT_DATA_NC NPROCX NPROCY NTIMES NUMENS LAUNCH_MPI_MODEL LAUNCH_MPI_XIOS
+    XIOS_EXEC="/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe"
+    MODEL_EXEC="/home/users/jcole/um/xios/xios_test/xios_test"
+    INPUT_DATA_NML="input_data_ens"
+    INPUT_DATA_NC="/home/users/jcole/um/xios/xios_test/u_plev_192x145x17.nc"
+    NPROCX="2"
+    NPROCY="2"
+    NTIMES="6"
+    NUMENS="3"
+    LAUNCH_MPI_MODEL="-np 4"
+    LAUNCH_MPI_XIOS="-np 4"
+}
+
+cylc__job__inst__init_script() {
+# INIT-SCRIPT:
+export SPACK_ROOT=/home/users/kunkel/spack
+. $SPACK_ROOT/share/spack/setup-env.sh
+spack load jansson glib gcc/aafm73y gettext/3bilnvc cmake autoconf/7qjzal7 automake/b7g5fr6 perl-uri
+export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
+module load kunkel/openmpi/3.1
+module load kunkel/hdf5/1.10.6
+export PATH=/home/users/jcole/esdm/install/bin:$PATH
+export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
+export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
+export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+/home/users/jcole/um/xios/xios_test/ens_test2_jasmin_esdm.sh
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 1/ens_test2_jasmin_esdm/01

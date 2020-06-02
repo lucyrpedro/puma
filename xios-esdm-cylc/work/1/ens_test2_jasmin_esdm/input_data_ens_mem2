@@ -1,0 +1,5 @@
+&input_data
+  filename = '/home/users/jcole/um/xios/xios_test/u_plev_192x145x17.nc',
+  varname = 'u',
+  varname_xios = 'u',
+/
