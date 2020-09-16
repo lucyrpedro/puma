@@ -1,1 +1,4 @@
 Git repository to transfer files between hpc machines and to/from my personal machine.
+
+File suite.rc is the file to work with ESDM, XIOS and Cylc.
+Originally from /home/users/glister/xios-esdm-cylc.
