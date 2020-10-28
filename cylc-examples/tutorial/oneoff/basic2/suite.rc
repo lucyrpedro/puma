@@ -1,0 +1,3 @@
+title = "The cylc Hello World! suite" [scheduling]
+    [[dependencies]]
+        graph = "foo"

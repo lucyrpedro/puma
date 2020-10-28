@@ -1,0 +1,15 @@
+title = "A Jinja2 Hello World! suite"
+[scheduling]
+    [[dependencies]]
+        graph = "hello => BYE"
+[runtime]
+    [[hello]]
+        script = "sleep 10; echo Hello World!"
+    [[BYE]]
+        script = "sleep 10; echo Goodbye World!"
+    [[ goodbye_0 ]]
+        inherit = BYE
+    [[ goodbye_1 ]]
+        inherit = BYE
+    [[ goodbye_2 ]]
+        inherit = BYE

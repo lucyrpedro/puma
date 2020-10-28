@@ -1,0 +1,11 @@
+[scheduling]
+    [[dependencies]]
+        graph = "foo => bar"
+[runtime]
+    [[foo]]
+        retry delays = 3*PT6S
+        script = """
+sleep 10
+if (( CYLC_TASK_TRY_NUMBER < 3 )); then
+    bin/false
+fi"""

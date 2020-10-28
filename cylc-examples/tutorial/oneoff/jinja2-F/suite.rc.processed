@@ -1,0 +1,7 @@
+title = "A Jinja2 Hello World! suite"
+[scheduling]
+    [[dependencies]]
+        graph = "hello"
+[runtime]
+    [[hello]]
+        script = "sleep 10; echo Hello World!"
