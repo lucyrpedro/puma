@@ -1,0 +1,26 @@
+
+title = "test suite"
+description = "first suite"
+# This is what my suite does:..."""
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2023
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = prep => model
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] => model => post
+    [[[R1/P0Y]]]  # Final cycle point.
+      graph = post => stop
+
+[runtime]
+  [[root]]  # Inherited by all tasks.
+    script = sleep 10
+  [[model]]
+    script = echo "my FOOD is $FOOD"; sleep 10; touch a.txt
+    [[[environment]]]
+      FOOD = icecream
+  [[prep]]
+    script = touch b.txt
+  [[post]]
+    script = touch c.txt
