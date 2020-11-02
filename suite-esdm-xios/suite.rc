@@ -6,8 +6,8 @@
 {% set XIOS_NPROC = 4 %}
 {% set NPROC = NPROCX*NPROCY %}
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
-{% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
-{% set MODEL_DIR = '/home/users/jcole/um/xios/xios_test' %}
+{% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_centos_7.7_dev' %}
+{% set MODEL_DIR = '/home/users/glister/xios_test' %}
 [scheduling]
     [[dependencies]]
         graph = "ens_test2_jasmin_esdm"
@@ -22,22 +22,22 @@
             module load kunkel/openmpi/3.1
             module load kunkel/hdf5/1.10.6
             
-            export PATH=/home/users/jcole/esdm/install/bin:$PATH
-            export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
-            export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
-            export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
-            export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+            export PATH=/home/users/jcole/esdm/install_centos_7.7/bin:$PATH
+            export LIBRARY_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LIBRARY_PATH
+            export LD_LIBRARY_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LD_LIBRARY_PATH
+            export LD_RUN_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LD_RUN_PATH
+            export CPATH=/home/users/jcole/esdm/install_centol_7.7/include:$CPATH
         """
     [[batch]]
         [[[job]]]
-            batch system = lsf
+            batch system = slurm
             execution time limit = PT10M
         [[[directives]]]
-            -n = {{TOT_NPROC}}
-            -q = par-multi
+            --ntasks={{TOT_NPROC}}
+            -p=par-multi
     [[ens_test2_jasmin_esdm]]
         inherit = batch
-        script = "ens_test2_jasmin_esdm.sh"
+        script = "/home/users/glister/ens_test2_jasmin_esdm.sh"
         [[[environment]]]
             XIOS_EXEC={{XIOS_DIR}}/bin/xios_server.exe
             MODEL_EXEC={{MODEL_DIR}}/xios_test

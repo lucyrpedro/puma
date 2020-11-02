@@ -6,14 +6,8 @@ export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
 module load kunkel/openmpi/3.1
 module load kunkel/hdf5/1.10.6
 
-export PATH=/home/users/jcole/esdm/install_centos_7.7/bin:$PATH
-export LIBRARY_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LD_LIBRARY_PATH
-export LD_RUN_PATH=/home/users/jcole/esdm/install_centos_7.7/lib:$LD_RUN_PATH
-export CPATH=/home/users/jcole/esdm/install_centol_7.7/include:$CPATH
-
-#export PATH=/home/users/jcole/esdm/install/bin:$PATH
-#export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
-#export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
-#export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
-#export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+export PATH=/home/users/jcole/esdm/install/bin:$PATH
+export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
+export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
+export CPATH=/home/users/jcole/esdm/install/include:$CPATH
