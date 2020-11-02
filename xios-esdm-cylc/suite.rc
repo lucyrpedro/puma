@@ -7,7 +7,7 @@
 {% set NPROC = NPROCX*NPROCY %}
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
 {% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
-{% set MODEL_DIR = '/home/users/jcole/um/xios/xios_test' %}
+{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
 [scheduling]
     [[dependencies]]
         graph = "ens_test2_jasmin_esdm"
@@ -21,23 +21,27 @@
             export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
             module load kunkel/openmpi/3.1
             module load kunkel/hdf5/1.10.6
+
             
             export PATH=/home/users/jcole/esdm/install/bin:$PATH
             export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
             export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
             export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
             export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+            module list
         """
     [[batch]]
         [[[job]]]
-            batch system = lsf
+            batch system = slurm
             execution time limit = PT10M
         [[[directives]]]
-            -n = {{TOT_NPROC}}
-            -q = par-multi
+            --ntasks={{TOT_NPROC}}
+            --partition=par-multi
+            --chdir=/group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test
+
     [[ens_test2_jasmin_esdm]]
         inherit = batch
-        script = "/home/users/jcole/um/xios/xios_test/ens_test2_jasmin_esdm.sh"
+        script = "/home/users/glister/ens_test2_jasmin_esdm.sh"
         [[[environment]]]
             XIOS_EXEC={{XIOS_DIR}}/bin/xios_server.exe
             MODEL_EXEC={{MODEL_DIR}}/xios_test
