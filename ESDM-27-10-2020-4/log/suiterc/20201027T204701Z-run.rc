@@ -1,0 +1,162 @@
+# cylc-version: 7.8.6
+[cylc]
+    cycle point num expanded year digits = 0
+    UTC mode = False
+    required run mode = 
+    force run mode = 
+    [[reference test]]
+        live mode suite timeout = PT1M
+        dummy mode suite timeout = PT1M
+        dummy-local mode suite timeout = PT1M
+        suite shutdown event handler = cylc hook check-triggering
+        required run mode = 
+        simulation mode suite timeout = PT1M
+    [[authentication]]
+        public = 
+    [[events]]
+    [[simulation]]
+        disable suite event handlers = True
+[scheduling]
+    max active cycle points = 3
+    cycling mode = integer
+    initial cycle point = 1
+    final cycle point = 1
+    [[dependencies]]
+        [[[R1]]]
+            graph = ens_test2_jasmin_esdm
+    [[queues]]
+        [[[default]]]
+            limit = 0
+            members = ens_test2_jasmin_esdm
+    [[special tasks]]
+[meta]
+    URL = 
+    group = 
+    description = 
+    title = 
+[visualization]
+    edge penwidth = 2
+    default node attributes = style=unfilled, shape=ellipse
+    node penwidth = 2
+    initial cycle point = 1
+    number of cycle points = 3
+    [[node groups]]
+        root = root, batch, ens_test2_jasmin_esdm
+        batch = batch, ens_test2_jasmin_esdm
+[runtime]
+    [[root]]
+        init-script = """
+            export SPACK_ROOT=/home/users/kunkel/spack
+            . $SPACK_ROOT/share/spack/setup-env.sh
+            spack load jansson glib gcc/aafm73y gettext/3bilnvc cmake autoconf/7qjzal7 automake/b7g5fr6 perl-uri
+            export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
+            module load kunkel/openmpi/3.1
+            module load kunkel/hdf5/1.10.6
+            export PATH=/home/users/jcole/esdm/install/bin:$PATH
+            export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
+            export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
+            export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
+            export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+            module list
+        """
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[batch]]
+        init-script = """
+            export SPACK_ROOT=/home/users/kunkel/spack
+            . $SPACK_ROOT/share/spack/setup-env.sh
+            spack load jansson glib gcc/aafm73y gettext/3bilnvc cmake autoconf/7qjzal7 automake/b7g5fr6 perl-uri
+            export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
+            module load kunkel/openmpi/3.1
+            module load kunkel/hdf5/1.10.6
+            export PATH=/home/users/jcole/esdm/install/bin:$PATH
+            export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
+            export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
+            export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
+            export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+            module list
+        """
+        [[[job]]]
+            batch system = slurm
+            execution time limit = PT10M
+            shell = /bin/bash
+        [[[directives]]]
+            --ntasks = 16
+            --partition = par-multi
+            --chdir = /group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test
+        [[[events]]]
+        [[[remote]]]
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[ens_test2_jasmin_esdm]]
+        init-script = """
+            export SPACK_ROOT=/home/users/kunkel/spack
+            . $SPACK_ROOT/share/spack/setup-env.sh
+            spack load jansson glib gcc/aafm73y gettext/3bilnvc cmake autoconf/7qjzal7 automake/b7g5fr6 perl-uri
+            export MODULEPATH=$MODULEPATH:/home/users/kunkel/install/modules
+            module load kunkel/openmpi/3.1
+            module load kunkel/hdf5/1.10.6
+            export PATH=/home/users/jcole/esdm/install/bin:$PATH
+            export LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LIBRARY_PATH
+            export LD_LIBRARY_PATH=/home/users/jcole/esdm/install/lib:$LD_LIBRARY_PATH
+            export LD_RUN_PATH=/home/users/jcole/esdm/install/lib:$LD_RUN_PATH
+            export CPATH=/home/users/jcole/esdm/install/include:$CPATH
+            module list
+        """
+        inherit = batch
+        script = /home/users/glister/ens_test2_jasmin_esdm.sh
+        [[[job]]]
+            batch system = slurm
+            execution time limit = PT10M
+            shell = /bin/bash
+        [[[directives]]]
+            --ntasks = 16
+            --partition = par-multi
+            --chdir = /group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test
+        [[[environment]]]
+            XIOS_EXEC = /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe
+            MODEL_EXEC = /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test
+            INPUT_DATA_NML = input_data_ens
+            INPUT_DATA_NC = /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/u_plev_192x145x17.nc
+            NPROCX = 2
+            NPROCY = 2
+            NTIMES = 6
+            NUMENS = 3
+            LAUNCH_MPI_MODEL = -np 4
+            LAUNCH_MPI_XIOS = -np 4
+        [[[events]]]
+        [[[remote]]]
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True

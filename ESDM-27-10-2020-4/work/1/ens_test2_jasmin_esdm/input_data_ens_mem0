@@ -1,0 +1,5 @@
+&input_data
+  filename = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/u_plev_192x145x17.nc',
+  varname = 'u',
+  varname_xios = 'u',
+/

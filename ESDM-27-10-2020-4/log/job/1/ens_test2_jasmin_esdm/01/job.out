@@ -1,0 +1,284 @@
+Suite    : ESDM-27-10-2020-4
+Task Job : 1/ens_test2_jasmin_esdm/01 (try 1)
+User@Host: lucy@host426.jc.rl.ac.uk
+
+[mkfs] Removing ./_metadummy
+[mkfs] Creating ./_metadummy
+[mkfs] Removing ./_posix1
+[mkfs] Creating ./_posix1
+[mkfs] OK
+mpiexec  -np 4 env ENS_MEMBER=0 /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test :  -np 4 env ENS_MEMBER=1 /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test :  -np 4 env ENS_MEMBER=2 /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test : -np 4 /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe
+2020-10-27T20:57:11Z INFO - started
+-> info : intercommCreate::client 0 intraCommSize : 12 intraCommRank :0  clientLeader 12
+-> info : intercommCreate::client 1 intraCommSize : 12 intraCommRank :1  clientLeader 12
+-> info : intercommCreate::client 2 intraCommSize : 12 intraCommRank :2  clientLeader 12
+-> info : intercommCreate::client 3 intraCommSize : 12 intraCommRank :3  clientLeader 12
+-> info : intercommCreate::client 4 intraCommSize : 12 intraCommRank :4  clientLeader 12
+-> info : intercommCreate::client 5 intraCommSize : 12 intraCommRank :5  clientLeader 12
+-> info : intercommCreate::client 6 intraCommSize : 12 intraCommRank :6  clientLeader 12
+-> info : intercommCreate::client 8 intraCommSize : 12 intraCommRank :8  clientLeader 12
+-> info : intercommCreate::client 9 intraCommSize : 12 intraCommRank :9  clientLeader 12
+-> info : intercommCreate::client 10 intraCommSize : 12 intraCommRank :10  clientLeader 12
+-> info : intercommCreate::client 11 intraCommSize : 12 intraCommRank :11  clientLeader 12
+-> info : intercommCreate::server (classical mode) 12 intraCommSize : 4 intraCommRank :0  clientLeader 0
+-> info : intercommCreate::server (classical mode) 13 intraCommSize : 4 intraCommRank :1  clientLeader 0
+-> info : intercommCreate::server (classical mode) 14 intraCommSize : 4 intraCommRank :2  clientLeader 0
+-> info : intercommCreate::server (classical mode) 15 intraCommSize : 4 intraCommRank :3  clientLeader 0
+-> info : intercommCreate::client 7 intraCommSize : 12 intraCommRank :7  clientLeader 12
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+[ESDM NC] WARN ESDM_def_var_chunking():2366. ESDM does not support compression!
+
+ESDM has not been shutdown correctly. Stacktrace:
+
+ESDM has not been shutdown correctly. Stacktrace:
+
+ESDM has not been shutdown correctly. Stacktrace:
+
+ESDM has not been shutdown correctly. Stacktrace:
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f5bba5b755c]
+4: /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe() [0x4de411]
+
+ESDM has not been shutdown correctly. Stacktrace:
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f333c14155c]
+4: /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe() [0x4de411]
+
+ESDM has not been shutdown correctly. Stacktrace:
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7fd063d3455c]
+4: /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe() [0x4de411]
+
+ESDM has not been shutdown correctly. Stacktrace:
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f8fc3f5755c]
+4: /home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev/bin/xios_server.exe() [0x4de411]
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f7e3306b55c]
+4: /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test() [0x4f809f]
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f04546f655c]
+4: /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test() [0x4f809f]
+3: /lib64/libc.so.6(__libc_start_main+0xfc) [0x7f09d399055c]
+4: /group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm/xios_test() [0x4f809f]
+2020-10-27T20:57:28Z INFO - succeeded

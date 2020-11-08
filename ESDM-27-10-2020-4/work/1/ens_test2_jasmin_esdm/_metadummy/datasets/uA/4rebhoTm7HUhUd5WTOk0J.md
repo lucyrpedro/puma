@@ -1,0 +1,4 @@
+{"Variables":{"type":"o","data":null,"childs":{"name":{"type":"q4@l","data":"dp17"},"standard_name":{"type":"q12@l","data":"air_pressure"},"long_name":{"type":"q15@l","data":"pressure levels"},"units":{"type":"q3@l","data":"hPa"},"positive":{"type":"q4@l","data":"down"}}},"fill-value":{"type":"k","data":9.9692099683868690e+36},"id":"uA4rebhoTm7HUhUd5WTOk0J","typ":"k","dims":1,"size":[17],"dims_dset_id":["dp17"],"fragments":[{"id":"5zQRlYAOH6VlWGKmCCAPkXB","pid":"p1","size":[17],"offset":[0]},
+{"id":"yIbVgJ9ELyQuRlMppeIQLn-","pid":"p1","size":[17],"offset":[0]},
+{"id":"JgiaRFUU4EJdiQ7UZcUtcEv","pid":"p1","size":[17],"offset":[0]},
+{"id":"gX_NBj-v_pcTta_1xKjlbNE","pid":"p1","size":[17],"offset":[0]}]}
