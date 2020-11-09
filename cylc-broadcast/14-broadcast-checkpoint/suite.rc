@@ -1,0 +1,18 @@
+[cylc]
+    UTC mode = True
+[scheduling]
+    initial cycle point = 20100101T03
+    [[dependencies]]
+        [[[R1]]] 
+		graph = "t1 => t2"
+[runtime]
+    [[t1]]
+        script = """
+cylc broadcast -s "[environment]VERSE = the quick brown fox" "${CYLC_SUITE_NAME}"
+cylc checkpoint "${CYLC_SUITE_NAME}" test1
+"""
+    [[t2]]
+        script = """
+cylc broadcast -s "[environment]PHRASE = the quick brown fox" "${CYLC_SUITE_NAME}"
+cylc checkpoint "${CYLC_SUITE_NAME}" test2
+"""
