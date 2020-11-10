@@ -41,11 +41,13 @@
 
     [[test_esdm]]
         inherit = batch
-        script = "create-xios-test-in.sh;
+        script = """
+		  create-xios-test-in.sh;
                   create-input-data.sh;
                   create-xios-xml.sh;
                   create-esdm-conf.sh;
-                  run-xios-test.sh;"
+                  run-xios-test.sh;
+		 """
         [[[environment]]]
             XIOS_EXEC={{XIOS_DIR}}/bin/xios_server.exe
             MODEL_EXEC={{MODEL_DIR}}/xios_test
