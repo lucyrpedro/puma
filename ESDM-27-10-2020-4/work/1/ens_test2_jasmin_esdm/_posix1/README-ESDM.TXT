@@ -1,1 +1,0 @@
-This directory belongs to ESDM and contains various files that are needed to make ESDM work. Do not delete it until you know what you are doing.

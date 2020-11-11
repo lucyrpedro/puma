@@ -1,4 +1,0 @@
-{"Variables":{"type":"o","data":null,"childs":{"axis":{"type":"l","data":"Y"},"standard_name":{"type":"q8@l","data":"latitude"},"long_name":{"type":"q8@l","data":"Latitude"},"units":{"type":"q13@l","data":"degrees_north"}}},"fill-value":{"type":"k","data":9.9692099683868690e+36},"id":"6tm-Hkw4KADvjCPJZJw9Yye","typ":"k","dims":1,"size":[145],"dims_dset_id":["lat"],"fragments":[{"id":"4SEF16qRM23PlfpA0x4xvGK","pid":"p1","size":[37],"offset":[0]},
-{"id":"uNksNW53ukGjWiI0TGViB5s","pid":"p1","size":[36],"offset":[37]},
-{"id":"_jm2wJDO0sBkKGBuFocpO0V","pid":"p1","size":[36],"offset":[109]},
-{"id":"IA6T3FBAnpFDK7guIXRiEnk","pid":"p1","size":[36],"offset":[73]}]}
