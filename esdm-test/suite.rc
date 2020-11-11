@@ -42,7 +42,7 @@
     [[test_esdm]]
         inherit = batch
         script = """
-		  create-xios-test-in.sh;
+		              create-xios-test-in.sh;
                   create-input-data.sh;
                   create-xios-xml.sh;
                   create-esdm-conf.sh;
