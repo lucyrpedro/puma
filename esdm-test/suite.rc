@@ -7,8 +7,8 @@
 {% set NPROC = NPROCX*NPROCY %}
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
 {% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
-{% set MODEL_DIR = '/home/users/lucy' %}
-#{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
 [scheduling]
     [[dependencies]]
         graph = "test_esdm"
@@ -52,7 +52,7 @@
             XIOS_EXEC={{XIOS_DIR}}/bin/xios_server.exe
             MODEL_EXEC={{MODEL_DIR}}/xios_test
             INPUT_DATA_NML='input_data_ens'
-            INPUT_DATA_NC={{MODEL_DIR}}/file.nc
+            INPUT_DATA_NC={{MODEL_DIR_INPUT}}/file.nc
             NPROCX = {{NPROCX}}
             NPROCY = {{NPROCY}}
             NTIMES = {{NTIMES}}
