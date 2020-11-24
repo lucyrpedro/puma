@@ -1,0 +1,104 @@
+15.6.3.2. Cylc Broadcast
+
+Usage: cylc [control] broadcast|bcast [OPTIONS] REG
+
+Override [runtime] config in targeted namespaces in a running suite.
+
+Uses for broadcast include making temporary changes to task behaviour, and task-to-downstream-task communication via environment variables.
+
+A broadcast can target any [runtime] namespace for all cycles or for a specific cycle.  If a task is affected by specific-cycle and all-cycle broadcasts at once, the specific takes precedence. If a task is affected by broadcasts to multiple ancestor namespaces, the result is determined by normal [runtime] inheritance. In other words, it follows this order:
+
+all:root -> all:FAM -> all:task -> tag:root -> tag:FAM -> tag:task
+
+Broadcasts persist, even across suite restarts, until they expire when their target cycle point is older than the oldest current in the suite, or until they are explicitly cancelled with this command.  All-cycle broadcasts do not expire.
+
+For each task the final effect of all broadcasts to all namespaces is computed on the fly just prior to job submission.  The --cancel and --clear options simply cancel (remove) active broadcasts, they do not act directly on the final task-level result. Consequently, for example, you cannot broadcast to "all cycles except Tn" with an all-cycle broadcast followed by a cancel to Tn (there is no direct broadcast to Tn to cancel); and you cannot broadcast to "all members of FAMILY except member_n" with a general broadcast to FAMILY followed by a cancel to member_n (there is no direct broadcast to member_n to cancel).
+
+To broadcast a variable to all tasks (quote items with internal spaces):
+  % cylc broadcast -s "[environment]VERSE = the quick brown fox" REG
+To do the same with a file:
+  % cat >'broadcast.rc' <<'__RC__'
+  % [environment]
+  %     VERSE = the quick brown fox
+  % __RC__
+  % cylc broadcast -F 'broadcast.rc' REG
+To cancel the same broadcast:
+  % cylc broadcast --cancel "[environment]VERSE" REG
+If -F FILE was used, the same file can be used to cancel the broadcast:
+  % cylc broadcast -G 'broadcast.rc' REG
+
+Use -d/--display to see active broadcasts. Multiple --cancel options or multiple --set and --set-file options can be used on the same command line. Multiple --set and --set-file options are cumulative.
+
+The --set-file=FILE option can be used when broadcasting multiple values, or when the value contains newline or other metacharacters. If FILE is "-", read from standard input.
+
+Broadcast cannot change [runtime] inheritance.
+
+See also 'cylc reload' - reload a modified suite definition at run time.
+
+Arguments:
+   REG               Suite name
+
+Options:
+  -h, --help            show this help message and exit
+  -p CYCLE_POINT, --point=CYCLE_POINT
+                        Target cycle point. More than one can be added.
+                        Defaults to '*' with --set and --cancel, and nothing
+                        with --clear.
+  -n NAME, --namespace=NAME
+                        Target namespace. Defaults to 'root' with --set and
+                        --cancel, and nothing with --clear.
+  -s [SEC]ITEM=VALUE, --set=[SEC]ITEM=VALUE
+                        A [runtime] config item and value to broadcast.
+  -F FILE, --set-file=FILE, --file=FILE
+                        File with config to broadcast. Can be used multiple
+                        times.
+  -c [SEC]ITEM, --cancel=[SEC]ITEM
+                        An item-specific broadcast to cancel.
+  -G FILE, --cancel-file=FILE
+                        File with broadcasts to cancel. Can be used multiple
+                        times.
+  -C, --clear           Cancel all broadcasts, or with -p/--point,
+                        -n/--namespace, cancel all broadcasts to targeted
+                        namespaces and/or cycle points. Use "-C -p '*'" to
+                        cancel all all-cycle broadcasts without canceling all
+                        specific-cycle broadcasts.
+  -e CYCLE_POINT, --expire=CYCLE_POINT
+                        Cancel any broadcasts that target cycle points earlier
+                        than, but not inclusive of, CYCLE_POINT.
+  -d, --display         Display active broadcasts.
+  -k TASKID, --display-task=TASKID
+                        Print active broadcasts for a given task
+                        (NAME.CYCLE_POINT).
+  -b, --box             Use unicode box characters with -d, -k.
+  -r, --raw             With -d/--display or -k/--display-task, write out the
+                        broadcast config structure in raw Python form.
+  --user=USER           Other user account name. This results in command
+                        reinvocation on the remote account.
+  --host=HOST           Other host name. This results in command reinvocation
+                        on the remote account.
+  -v, --verbose         Verbose output mode.
+  --debug               Output developer information and show exception
+                        tracebacks.
+  --port=INT            Suite port number on the suite host. NOTE: this is
+                        retrieved automatically if non-interactive ssh is
+                        configured to the suite host.
+  --use-ssh             Use ssh to re-invoke the command on the suite host.
+  --ssh-cylc=SSH_CYLC   Location of cylc executable on remote ssh commands.
+  --no-login            Do not use a login shell to run remote ssh commands.
+                        The default is to use a login shell.
+  --comms-timeout=SEC, --pyro-timeout=SEC
+                        Set a timeout for network connections to the running
+                        suite. The default is no timeout. For task messaging
+                        connections see site/user config file documentation.
+  --print-uuid          Print the client UUID to stderr. This can be matched
+                        to information logged by the receiving suite server
+                        program.
+  --set-uuid=UUID       Set the client UUID manually (e.g. from prior use of
+                        --print-uuid). This can be used to log multiple
+                        commands under the same UUID (but note that only the
+                        first [info] command from the same client ID will be
+                        logged unless the suite is running in debug mode).
+  -f, --force           Do not ask for confirmation before acting. Note that
+                        it is not necessary to use this option if interactive
+                        command prompts have been disabled in the site/user
+                        config files.

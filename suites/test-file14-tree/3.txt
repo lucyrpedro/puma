@@ -1,0 +1,113 @@
+.
+├── cylc-suite.db -> log/db
+├── log
+│   ├── db
+│   ├── job
+│   │   ├── 20210101T0000Z
+│   │   │   ├── model
+│   │   │   │   ├── 01
+│   │   │   │   │   ├── job
+│   │   │   │   │   ├── job-activity.log
+│   │   │   │   │   ├── job.err
+│   │   │   │   │   ├── job.out
+│   │   │   │   │   └── job.status
+│   │   │   │   └── NN -> 01
+│   │   │   ├── post
+│   │   │   │   ├── 01
+│   │   │   │   │   ├── job
+│   │   │   │   │   ├── job-activity.log
+│   │   │   │   │   ├── job.err
+│   │   │   │   │   ├── job.out
+│   │   │   │   │   └── job.status
+│   │   │   │   └── NN -> 01
+│   │   │   └── prep
+│   │   │       ├── 01
+│   │   │       │   ├── job
+│   │   │       │   ├── job-activity.log
+│   │   │       │   ├── job.err
+│   │   │       │   ├── job.out
+│   │   │       │   └── job.status
+│   │   │       └── NN -> 01
+│   │   ├── 20220101T0000Z
+│   │   │   ├── model
+│   │   │   │   ├── 01
+│   │   │   │   │   ├── job
+│   │   │   │   │   ├── job-activity.log
+│   │   │   │   │   ├── job.err
+│   │   │   │   │   ├── job.out
+│   │   │   │   │   └── job.status
+│   │   │   │   └── NN -> 01
+│   │   │   └── post
+│   │   │       ├── 01
+│   │   │       │   ├── job
+│   │   │       │   ├── job-activity.log
+│   │   │       │   ├── job.err
+│   │   │       │   ├── job.out
+│   │   │       │   └── job.status
+│   │   │       └── NN -> 01
+│   │   └── 20230101T0000Z
+│   │       ├── model
+│   │       │   ├── 01
+│   │       │   │   ├── job
+│   │       │   │   ├── job-activity.log
+│   │       │   │   ├── job.err
+│   │       │   │   ├── job.out
+│   │       │   │   └── job.status
+│   │       │   └── NN -> 01
+│   │       ├── post
+│   │       │   ├── 01
+│   │       │   │   ├── job
+│   │       │   │   ├── job-activity.log
+│   │       │   │   ├── job.err
+│   │       │   │   ├── job.out
+│   │       │   │   └── job.status
+│   │       │   └── NN -> 01
+│   │       └── stop
+│   │           ├── 01
+│   │           │   ├── job
+│   │           │   ├── job-activity.log
+│   │           │   ├── job.err
+│   │           │   ├── job.out
+│   │           │   └── job.status
+│   │           └── NN -> 01
+│   ├── suite
+│   │   ├── log -> log.20201115T151620Z
+│   │   └── log.20201115T151620Z
+│   └── suiterc
+│       └── 20201115T151620Z-run.rc
+├── share
+├── suite.rc.processed
+└── work
+    ├── 20210101T0000Z
+    │   ├── model
+    │   │   ├── aaabbb-out.txt
+    │   │   ├── aaa.txt
+    │   │   └── bbb.txt
+    │   ├── post
+    │   │   ├── cd-out.txt
+    │   │   ├── c.txt
+    │   │   └── d.txt
+    │   └── prep
+    │       ├── b-out.txt
+    │       └── b.txt
+    ├── 20220101T0000Z
+    │   ├── model
+    │   │   ├── aaabbb-out.txt
+    │   │   ├── aaa.txt
+    │   │   └── bbb.txt
+    │   └── post
+    │       ├── cd-out.txt
+    │       ├── c.txt
+    │       └── d.txt
+    └── 20230101T0000Z
+        ├── model
+        │   ├── aaabbb-out.txt
+        │   ├── aaa.txt
+        │   └── bbb.txt
+        ├── post
+        │   ├── cd-out.txt
+        │   ├── c.txt
+        │   └── d.txt
+        └── stop
+            ├── d-out.txt
+            └── d.txt
