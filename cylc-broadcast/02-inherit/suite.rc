@@ -16,21 +16,20 @@
     [[broadcast_all]]
         script="""
 cylc broadcast -s "[environment]ALL_0=true" -n F1 $CYLC_SUITE_NAME
-cylc broadcast -s "[environment]ALL_1=true" -n t1 $CYLC_SUITE_NAME
 """
     [[broadcast_tag]]
         script="""
-cylc broadcast -s "[environment]TAG_0=true" -n F1 -p $CYLC_TASK_CYCLE_POINT \
-    $CYLC_SUITE_NAME
 cylc broadcast -s "[environment]TAG_1=true" -n t1 -p $CYLC_TASK_CYCLE_POINT \
     $CYLC_SUITE_NAME
 """
     [[F1]]
         script="""
 $ALL_0
-$ALL_1
-$TAG_0
 $TAG_1
+echo $ALL_0
+echo $ALL_1
+echo $TAG_0
+echo $TAG_1
 """
         [[[environment]]]
             ALL_0=false

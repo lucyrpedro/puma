@@ -1,6 +1,7 @@
-title = "test suite"
-description = "first suite"
-# This is what my suite does:..."""
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
 [scheduling]
   initial cycle point = 2021
   final cycle point = 2023
@@ -37,3 +38,11 @@ description = "first suite"
     script = ${SCRIPT_NAME_STOP}.sh; sleep 10
     [[[environment]]]
       SCRIPT_NAME_STOP = script-stop
+[visualization]
+  initial cycle point = 2021
+  final cycle point = 2023
+    [[node attributes]]
+        prep = "color=red"
+        model = "color=blue"
+        post = "color=green"
+	stop = "color=orange"

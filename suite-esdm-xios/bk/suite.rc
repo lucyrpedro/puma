@@ -36,7 +36,7 @@
             execution time limit = PT10M
         [[[directives]]]
             --ntasks={{TOT_NPROC}}
-            --partition=test
+            --partition=par-multi
             --chdir=/group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test
 
     [[ens_test2_jasmin_esdm]]
