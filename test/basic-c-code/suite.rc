@@ -1,0 +1,17 @@
+[meta]
+    title = "The cylc Hello World! suite"
+[scheduling]
+    [[dependencies]]
+        graph = "hello"
+[runtime]
+    [[hello]]
+        script = """
+		touch d.txt
+		echo $(pwd)
+#		/home/users/lucy/puma/test/basic-c-code/bin/prog
+		$HOME_PATH/test/basic-c-code/bin/prog
+                echo $(pwd)
+		prog.sh
+	"""
+	[[[environment]]]
+		HOME_PATH = /home/users/lucy/puma/

@@ -1,0 +1,10 @@
+[meta]
+    title = "The cylc Hello World! suite"
+[scheduling]
+    [[dependencies]]
+        graph = "hello"
+[runtime]
+    [[hello]]
+        script = "python $HOME_PATH/test/basic-python-code/bin/hello.py; echo Hello World!; touch a.txt"
+	[[[environment]]]
+		HOME_PATH = /home/users/lucy/puma/
