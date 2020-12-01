@@ -5,7 +5,7 @@
 		init = "/pool/input/app/config/init.dat"
 
 	[[outputs]]
-		[[[varA]]] # This is the name of the variable
+		[[[fileA]]] # This is the name of the file
 			pattern = 1 day
 			lifetime = 5 years
 			type = product

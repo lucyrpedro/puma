@@ -1,0 +1,6 @@
+./1/foo/host.txt
+./1/bar/remote.txt
+./list_files.sh
+./files.txt
+./read_files.sh
+./sort_files.sh

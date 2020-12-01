@@ -1,0 +1,14 @@
+./list_files.sh
+./files.txt
+./read_files.sh
+./files_size.txt
+./s4/log/job/1/foo/01/job
+./s4/log/job/1/foo/01/job.status
+./s4/log/job/1/foo/01/job.out
+./s4/log/job/1/foo/01/job.err
+./s4/log/job/1/bar/01/job
+./s4/log/job/1/bar/01/job.status
+./s4/log/job/1/bar/01/job.out
+./s4/log/job/1/bar/01/job.err
+./s4/work/1/foo/host.txt
+./s4/work/1/bar/remote.txt

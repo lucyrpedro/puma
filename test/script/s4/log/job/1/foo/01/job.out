@@ -1,0 +1,6 @@
+Suite    : s4
+Task Job : 1/foo/01 (try 1)
+User@Host: lucy@xfer1.jasmin.ac.uk
+
+2020-11-26T13:37:16Z INFO - started
+2020-11-26T13:37:17Z INFO - succeeded

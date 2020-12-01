@@ -1,0 +1,42 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: s4
+# Task: bar.1
+# Job log directory: 1/bar/01
+# Job submit method: background
+# N.B. CYLC_DIR has been updated on the remote host
+export CYLC_DIR='/home/users/rshatcher/software/cylc-7.8.1'
+export CYLC_VERSION='7.8.1'
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="integer"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="1"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="1"
+    export CYLC_SUITE_NAME="s4"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/s4"
+    export CYLC_SUITE_DEF_PATH="${HOME}/s4"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/s4"
+    export CYLC_SUITE_UUID="3bb8070a-027c-4924-8057-353c2ee65ddc"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="1/bar/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root bar"
+    export CYLC_TASK_DEPENDENCIES="foo.1"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+touch remote.txt
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 1/bar/01
