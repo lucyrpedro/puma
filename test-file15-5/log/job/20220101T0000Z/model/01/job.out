@@ -1,0 +1,16 @@
+Suite    : test-file15-5
+Task Job : 20220101T0000Z/model/01 (try 1)
+User@Host: lucy@cylc1.jasmin.ac.uk
+
+false
+/apps/jasmin/metomi/cylc-7.8.6
+7.8.6
+gregorian
+20230101T0000Z
+20210101T0000Z
+test-file15-5
+False
+false
+
+2020-12-01T19:57:51Z INFO - started
+2020-12-01T19:58:01Z INFO - succeeded

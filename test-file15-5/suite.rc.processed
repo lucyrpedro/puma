@@ -1,10 +1,3 @@
-#!jinja2
-{% set NTIMES = 6 %}
-{% set NUMENS = 3 %}
-{% set NPROCX = 2 %}
-{% set NPROCY = 2 %}
-{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
-
 [meta]
   title = test suite
   description = first suite
@@ -19,7 +12,6 @@
       graph = model[-P1Y] => model => post
     [[[R1/P0Y]]]  # Final cycle point.
       graph = post => stop
-
 [runtime]
   [[root]]  # Inherited by all tasks.
     script = sleep 5
@@ -35,16 +27,16 @@
     [[[environment]]]
       SCRIPT_NAME = create-input-data
       INPUT_DATA_NML = 'input_data_ens'
-      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+      INPUT_DATA_NC = /home/users/lucy/file.nc
   [[xios_test_in]]
     script = ${SCRIPT_NAME}.sh; sleep 10
     [[[environment]]]
       SCRIPT_NAME = create-xios-test-in
       INPUT_DATA_NML = 'input_data_ens'
-      NPROCX = {{NPROCX}}
-      NPROCY = {{NPROCY}}
-      NTIMES = {{NTIMES}}
-      NUMENS = {{NUMENS}}
+      NPROCX = 2
+      NPROCY = 2
+      NTIMES = 6
+      NUMENS = 3
   [[xios_xml]]
     script = ${SCRIPT_NAME}.sh; sleep 10
     [[[environment]]]

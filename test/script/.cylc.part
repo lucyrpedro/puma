@@ -1,0 +1,15 @@
+0 ./s4/work/1/bar/remote.txt
+1 ./list_files.sh
+1 ./files.txt
+1 ./read_files.sh
+1 ./files_size.txt
+2 ./s4/log/job/1/foo/01/job
+1 ./s4/log/job/1/foo/01/job.status
+1 ./s4/log/job/1/foo/01/job.out
+0 ./s4/log/job/1/foo/01/job.err
+2 ./s4/log/job/1/bar/01/job
+1 ./s4/log/job/1/bar/01/job.status
+1 ./s4/log/job/1/bar/01/job.out
+0 ./s4/log/job/1/bar/01/job.err
+0 ./s4/work/1/foo/host.txt
+0 ./s4/work/1/bar/remote.txt

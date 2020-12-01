@@ -1,0 +1,81 @@
+
+echo "CYLC_DEBUG"
+false
+echo "CYLC_DIR"
+/apps/jasmin/metomi/cylc-7.8.6
+echo "CYLC_VERSION"
+7.8.6
+
+echo "CYLC_CYCLING_MODE"
+gregorian
+echo "CYLC_SUITE_FINAL_CYCLE_POINT"
+20230101T0000Z
+echo "CYLC_SUITE_INITIAL_CYCLE_POINT"
+20210101T0000Z
+echo "CYLC_SUITE_NAME"
+test-file15-5
+echo "CYLC_UTC"
+False
+echo "CYLC_VERBOSE"
+false
+echo "TZ"
+
+
+echo "CYLC_SUITE_RUN_DIR"
+/home/users/lucy/cylc-run/test-file15-5
+
+echo "CYLC_SUITE_DEF_PATH"
+/home/users/lucy/puma/suites/test-file15
+
+echo "CYLC_SUITE_HOST"
+cylc1.jasmin.ac.uk
+echo "CYLC_SUITE_OWNER"
+lucy
+echo "CYLC_SUITE_DEF_PATH_ON_SUITE_HOST"
+/home/users/lucy/puma/suites/test-file15
+
+echo "CYLC_SUITE_SHARE_DIR"
+/home/users/lucy/cylc-run/test-file15-5/share
+
+echo "CYLC_SUITE_UUID"
+e865e61f-1e50-49f6-aa3b-028f3bc3687f
+echo "CYLC_SUITE_WORK_DIR"
+/home/users/lucy/cylc-run/test-file15-5/work
+
+echo "CYLC_TASK_JOB"
+20220101T0000Z/model/01
+
+echo "CYLC_TASK_CYCLE_POINT"
+20220101T0000Z
+echo "CYLC_TASK_NAME"
+model
+echo "CYLC_TASK_SUBMIT_NUMBER"
+1
+
+echo "CYLC_TASK_TRY_NUMBER"
+1
+
+echo "CYLC_TASK_ID"
+model.20220101T0000Z
+
+echo "CYLC_TASK_LOG_DIR"
+/home/users/lucy/cylc-run/test-file15-5/log/job/20220101T0000Z/model/01
+
+echo "CYLC_TASK_LOG_ROOT"
+/home/users/lucy/cylc-run/test-file15-5/log/job/20220101T0000Z/model/01/job
+
+echo "CYLC_TASK_WORK_DIR"
+/home/users/lucy/cylc-run/test-file15-5/work/20220101T0000Z/model
+
+echo "CYLC_TASK_NAMESPACE_HIERARCHY"
+root model
+
+echo "CYLC_TASK_DEPENDENCIES"
+model.20210101T0000Z
+
+echo "CYLC_TASK_COMMS_METHOD"
+
+
+echo "CYLC_TASK_SSH_LOGIN_SHELL"
+
+

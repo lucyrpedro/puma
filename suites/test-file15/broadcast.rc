@@ -1,4 +1,4 @@
 [environment]
-      VAR_A = aaa
-      VAR_B = bbb
-      FILE = filenamefff.txt
+      VAR_TYPE = POSIX
+      VAR_ID = p1
+      VAR_TARGET = ./posix1

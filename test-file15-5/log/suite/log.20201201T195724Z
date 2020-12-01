@@ -1,0 +1,75 @@
+2020-12-01T19:57:24Z INFO - Suite server: url=https://cylc1.jasmin.ac.uk:43077/ pid=24191
+2020-12-01T19:57:24Z INFO - Run: (re)start=0 log=1
+2020-12-01T19:57:24Z INFO - Cylc version: 7.8.6
+2020-12-01T19:57:24Z INFO - Run mode: live
+2020-12-01T19:57:24Z INFO - Initial point: 20210101T0000Z
+2020-12-01T19:57:24Z INFO - Final point: 20230101T0000Z
+2020-12-01T19:57:24Z INFO - Cold Start 20210101T0000Z
+2020-12-01T19:57:24Z INFO - [xios_test_in.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:24Z INFO - [xios_xml.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:24Z INFO - [esdm-conf.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:24Z INFO - [input_data.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:25Z INFO - [esdm-conf.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:24Z for job(01)
+2020-12-01T19:57:25Z INFO - [esdm-conf.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:25Z INFO - [input_data.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:24Z for job(01)
+2020-12-01T19:57:25Z INFO - [input_data.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:25Z INFO - [xios_test_in.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:24Z for job(01)
+2020-12-01T19:57:25Z INFO - [xios_test_in.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:25Z INFO - [xios_xml.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:24Z for job(01)
+2020-12-01T19:57:25Z INFO - [xios_xml.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:26Z INFO - [xios_test_in.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:25Z for job(01)
+2020-12-01T19:57:26Z INFO - [xios_test_in.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:26Z INFO - [xios_xml.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:25Z for job(01)
+2020-12-01T19:57:26Z INFO - [xios_xml.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:26Z INFO - [esdm-conf.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:25Z for job(01)
+2020-12-01T19:57:26Z INFO - [esdm-conf.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:26Z INFO - [input_data.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:25Z for job(01)
+2020-12-01T19:57:26Z INFO - [input_data.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:36Z INFO - [xios_test_in.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:35Z for job(01)
+2020-12-01T19:57:36Z INFO - [xios_xml.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:35Z for job(01)
+2020-12-01T19:57:36Z INFO - [esdm-conf.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:35Z for job(01)
+2020-12-01T19:57:36Z INFO - [input_data.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:35Z for job(01)
+2020-12-01T19:57:37Z INFO - [model.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:38Z INFO - [model.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:37Z for job(01)
+2020-12-01T19:57:38Z INFO - [model.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:39Z INFO - [model.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:38Z for job(01)
+2020-12-01T19:57:39Z INFO - [model.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:49Z INFO - [model.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:48Z for job(01)
+2020-12-01T19:57:50Z INFO - [post.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:50Z INFO - [model.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:57:51Z INFO - [model.20220101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:50Z for job(01)
+2020-12-01T19:57:51Z INFO - [model.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:51Z INFO - [post.20210101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:57:50Z for job(01)
+2020-12-01T19:57:51Z INFO - [post.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:52Z INFO - [post.20210101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:51Z for job(01)
+2020-12-01T19:57:52Z INFO - [post.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:52Z INFO - [model.20220101T0000Z] status=submitted: (received)started at 2020-12-01T19:57:51Z for job(01)
+2020-12-01T19:57:52Z INFO - [model.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:57:57Z INFO - [post.20210101T0000Z] status=running: (received)succeeded at 2020-12-01T19:57:56Z for job(01)
+2020-12-01T19:58:03Z INFO - [model.20220101T0000Z] status=running: (received)succeeded at 2020-12-01T19:58:01Z for job(01)
+2020-12-01T19:58:04Z INFO - [post.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:58:04Z INFO - [model.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:58:05Z INFO - [model.20230101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:58:04Z for job(01)
+2020-12-01T19:58:05Z INFO - [model.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:05Z INFO - [post.20220101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:58:04Z for job(01)
+2020-12-01T19:58:05Z INFO - [post.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:06Z INFO - [post.20220101T0000Z] status=submitted: (received)started at 2020-12-01T19:58:05Z for job(01)
+2020-12-01T19:58:06Z INFO - [post.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:06Z INFO - [model.20230101T0000Z] status=submitted: (received)started at 2020-12-01T19:58:05Z for job(01)
+2020-12-01T19:58:06Z INFO - [model.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:11Z INFO - [post.20220101T0000Z] status=running: (received)succeeded at 2020-12-01T19:58:10Z for job(01)
+2020-12-01T19:58:17Z INFO - [model.20230101T0000Z] status=running: (received)succeeded at 2020-12-01T19:58:15Z for job(01)
+2020-12-01T19:58:18Z INFO - [post.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:58:19Z INFO - [post.20230101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:58:18Z for job(01)
+2020-12-01T19:58:19Z INFO - [post.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:20Z INFO - [post.20230101T0000Z] status=submitted: (received)started at 2020-12-01T19:58:19Z for job(01)
+2020-12-01T19:58:20Z INFO - [post.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:25Z INFO - [post.20230101T0000Z] status=running: (received)succeeded at 2020-12-01T19:58:24Z for job(01)
+2020-12-01T19:58:26Z INFO - [stop.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-01T19:58:27Z INFO - [stop.20230101T0000Z] status=ready: (internal)submitted at 2020-12-01T19:58:27Z for job(01)
+2020-12-01T19:58:27Z INFO - [stop.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:28Z INFO - [stop.20230101T0000Z] status=submitted: (received)started at 2020-12-01T19:58:27Z for job(01)
+2020-12-01T19:58:28Z INFO - [stop.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-01T19:58:33Z INFO - [stop.20230101T0000Z] status=running: (received)succeeded at 2020-12-01T19:58:32Z for job(01)
+2020-12-01T19:58:33Z INFO - Suite shutting down - AUTOMATIC
+2020-12-01T19:58:34Z INFO - DONE

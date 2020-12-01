@@ -1,0 +1,14 @@
+-rwxrwxrwx 1 lucy users 40 Nov 26 14:47 ./list_files.sh
+-rw-r--r-- 1 lucy users 351 Nov 26 16:24 ./files.txt
+-rwxrwxrwx 1 lucy users 155 Nov 26 16:18 ./read_files.sh
+-rw-r--r-- 1 lucy users 411 Nov 26 16:24 ./files_size.txt
+-rwxr-xr-x 1 lucy users 1146 Nov 26 16:23 ./s4/log/job/1/foo/01/job
+-rw-r--r-- 1 lucy users 232 Nov 26 16:23 ./s4/log/job/1/foo/01/job.status
+-rw-r--r-- 1 lucy users 152 Nov 26 16:23 ./s4/log/job/1/foo/01/job.out
+-rw-r--r-- 1 lucy users 0 Nov 26 16:23 ./s4/log/job/1/foo/01/job.err
+-rwxr-xr-x 1 lucy users 1153 Nov 26 16:23 ./s4/log/job/1/bar/01/job
+-rw-r--r-- 1 lucy users 232 Nov 26 16:23 ./s4/log/job/1/bar/01/job.status
+-rw-r--r-- 1 lucy users 152 Nov 26 16:23 ./s4/log/job/1/bar/01/job.out
+-rw-r--r-- 1 lucy users 0 Nov 26 16:23 ./s4/log/job/1/bar/01/job.err
+-rw-r--r-- 1 lucy users 0 Nov 26 16:23 ./s4/work/1/foo/host.txt
+-rw-r--r-- 1 lucy users 0 Nov 26 16:23 ./s4/work/1/bar/remote.txt
