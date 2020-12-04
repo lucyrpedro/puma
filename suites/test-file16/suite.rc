@@ -1,0 +1,89 @@
+#!jinja2
+{% set NTIMES = 6 %}
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set XIOS_NPROC = 4 %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2023
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = prep => esdm-conf & input_data & xios_test_in & xios_xml => model
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] => model => post
+    [[[R1/P0Y]]]  # Final cycle point.
+      graph = post # => run_xios_test
+
+[runtime]
+  [[root]]  # Inherited by all tasks.
+    script = sleep 5
+  [[batch]]
+    [[[job]]]
+        batch system = slurm
+        execution time limit = PT10M
+    [[[directives]]]
+        --ntasks={{TOT_NPROC}}
+        --partition=test
+  [[prep]]
+   script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = init-script
+  [[esdm-conf]]
+   script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = create-esdm-conf
+      VAR_TYPE = POSIX
+      VAR_ID = p1
+      VAR_TARGET = ./posix1
+  [[input_data]]
+    script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = create-input-data
+      INPUT_DATA_NML = 'input_data_ens'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+  [[xios_test_in]]
+    script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-test-in
+      INPUT_DATA_NML = 'input_data_ens'
+      NPROCX = {{NPROCX}}
+      NPROCY = {{NPROCY}}
+      NTIMES = {{NTIMES}}
+      NUMENS = {{NUMENS}}
+  [[xios_xml]]
+    script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-xml
+  [[model]]
+    script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = variables
+  [[run_xios_test]]
+    inherit = batch
+    script = ${SCRIPT_NAME}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME = run-xios-test
+      NUMENS = {{NUMENS}}
+      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      MODEL_EXEC = {{MODEL_DIR}}/xios_test
+      INPUT_DATA_NML = 'input_data_ens'
+      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
+[visualization]
+  initial cycle point = 2021
+  final cycle point = 2023
+    [[node attributes]]
+        esdm-conf = "color=red"
+        input_data = "color=blue"
+        xios_test = "color=green"
+	xios_xml = "color=orange"

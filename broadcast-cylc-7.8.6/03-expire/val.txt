@@ -1,0 +1,10 @@
+WARNING - deprecated items were automatically upgraded in 'suite definition':
+WARNING -  * (6.4.0) [runtime][broadcast][post-command scripting] -> [runtime][broadcast][post-script] - value unchanged
+WARNING -  * (6.4.0) [runtime][broadcast-expire][post-command scripting] -> [runtime][broadcast-expire][post-script] - value unchanged
+WARNING -  * (6.4.0) [runtime][t1][post-command scripting] -> [runtime][t1][post-script] - value unchanged
+WARNING -  * (6.4.0) [runtime][t2][post-command scripting] -> [runtime][t2][post-script] - value unchanged
+WARNING -  * (6.4.0) [runtime][broadcast][command scripting] -> [runtime][broadcast][script] - value unchanged
+WARNING -  * (6.4.0) [runtime][broadcast-expire][command scripting] -> [runtime][broadcast-expire][script] - value unchanged
+WARNING -  * (6.4.0) [runtime][F1][command scripting] -> [runtime][F1][script] - value unchanged
+
+Valid for cylc-7.8.6

@@ -1,0 +1,80 @@
+#!jinja2
+{% set NTIMES = 6 %}
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set XIOS_NPROC = 4 %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
+[scheduling]
+  [[dependencies]]
+      graph = """
+esdm-conf & input_data & xios_test_in & xios_xml => combine => run_xios_test
+	"""
+[runtime]
+  [[root]]
+    init-script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = init-script.sh
+  [[batch]]
+    [[[job]]]
+        batch system = slurm
+        execution time limit = PT10M
+    [[[directives]]]
+        --ntasks={{TOT_NPROC}}
+        --partition=test
+  [[run_xios_test]]
+    inherit = batch
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+#      SCRIPT_NAME = run-xios-test.sh
+      SCRIPT_NAME = combine.sh
+      NUMENS = {{NUMENS}}
+      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      MODEL_EXEC = {{MODEL_DIR}}/xios_test
+      INPUT_DATA_NML = 'input_data_ens'
+      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
+  [[esdm-conf]]
+   script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-esdm-conf.sh
+      VAR_TYPE = POSIX
+      VAR_ID = p1
+      VAR_TARGET = ./posix1
+  [[input_data]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-input-data.sh
+      INPUT_DATA_NML = 'input_data_ens'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+  [[xios_test_in]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-test-in.sh
+      INPUT_DATA_NML = 'input_data_ens'
+      NPROCX = {{NPROCX}}
+      NPROCY = {{NPROCY}}
+      NTIMES = {{NTIMES}}
+      NUMENS = {{NUMENS}}
+  [[xios_xml]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-xml.sh
+#  [[combine]]
+ #   script = ${SCRIPT_NAME}
+  #  [[[environment]]]
+   #   SCRIPT_NAME = combine.sh
+[visualization]
+    [[node attributes]]
+        esdm-conf = "color=red"
+        input_data = "color=blue"
+        xios_test_in = "color=green"
+	xios_xml = "color=orange"

@@ -1,0 +1,4 @@
+[environment]
+      VAR_TYPE = POSIX
+      VAR_ID = p1
+      VAR_TARGET = ./posix1

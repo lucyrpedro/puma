@@ -1,0 +1,3 @@
+WARNING - deprecated items were automatically upgraded in 'suite definition':
+WARNING -  * (6.4.0) [runtime][broadcast][command scripting] -> [runtime][broadcast][script] - value unchanged
+WARNING -  * (6.4.0) [runtime][t1][command scripting] -> [runtime][t1][script] - value unchanged
