@@ -1,0 +1,105 @@
+[Task 1]
+	[[inputs]]
+
+		topography = "/pool/input/app/config/topography.dat"
+		checkpoint = "[Task 1].checkpoint$(CYCLE - 1)"
+		init = "/pool/input/app/config/init.dat"
+
+	[[outputs]]
+
+		[[[./20210101T0000Z/xios_test_in/xios_test.in]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 212
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/esdm-conf/esdm.conf]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 454
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/xios_xml/iodef.xml]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 2083
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/input_data/input_data_ens]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 94
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/model/variables.cylc]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 2099
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/model/variables.cylc]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 1935
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/model/variables.cylc]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 1935
+			precision.absolute_tolerance = 0.1
+
+		[[[./add-file.sh]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 524
+			precision.absolute_tolerance = 0.1
+
+		[[[./calc-mean.sh]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 211
+			precision.absolute_tolerance = 0.1
+
+		[[[./create-io-cylc.sh]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 394
+			precision.absolute_tolerance = 0.1
+
+		[[[./list_files.sh]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 40
+			precision.absolute_tolerance = 0.1
+
+		[[[./files.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 350
+			precision.absolute_tolerance = 0.1
+

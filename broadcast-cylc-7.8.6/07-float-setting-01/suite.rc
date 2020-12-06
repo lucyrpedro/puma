@@ -1,0 +1,20 @@
+[meta]
+    title = "test suite for broadcast timeout functionality"
+
+[cylc]
+    UTC mode = False
+
+[scheduling]
+    cycling mode = integer
+    initial cycle point = 1
+    final cycle point   = 3
+    [[dependencies]]
+        [[[R1]]]
+            graph = """
+                send_broadcast => timeout
+            """
+        [[[P1]]] # = R/1/P1
+            graph = foo[-P1] => foo => bar
+
+[runtime]
+    [[timeout]]

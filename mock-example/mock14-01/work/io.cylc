@@ -1,0 +1,201 @@
+[Task 1]
+	[[inputs]]
+
+		topography = "/pool/input/app/config/topography.dat"
+		checkpoint = "[Task 1].checkpoint$(CYCLE - 1)"
+		init = "/pool/input/app/config/init.dat"
+
+	[[outputs]]
+
+		[[[./20210101T0000Z/prep/b.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/prep/b-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 86
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/model/a.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/model/b.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/model/ab-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 87
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/post/c.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/post/d.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20210101T0000Z/post/cd-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 86
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/model/a.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/model/b.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/model/ab-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 87
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/post/c.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/post/d.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20220101T0000Z/post/cd-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 86
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/model/a.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/model/b.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/model/ab-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 87
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/post/c.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 85
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/post/d.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/post/cd-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 86
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/stop/d.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 0
+			precision.absolute_tolerance = 0.1
+
+		[[[./20230101T0000Z/stop/d-out.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 86
+			precision.absolute_tolerance = 0.1
+
+		[[[./list_files.sh]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 40
+			precision.absolute_tolerance = 0.1
+
+		[[[./files.txt]]]
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 691
+			precision.absolute_tolerance = 0.1
+

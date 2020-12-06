@@ -1,0 +1,5 @@
+script=echo $CYLC_FOOBAR
+[environment]
+    CYLC_FOOBAR="""
+1 2 3
+"""

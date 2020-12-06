@@ -1,0 +1,50 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: mock01
+# Task: post.20230101T0000Z
+# Job log directory: 20230101T0000Z/post/01
+# Job submit method: background
+export CYLC_DIR='/apps/jasmin/metomi/cylc-7.8.6'
+export CYLC_VERSION='7.8.6'
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="20230101T0000Z"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="20210101T0000Z"
+    export CYLC_SUITE_NAME="mock01"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="/home/users/lucy/cylc-run/mock01"
+    export CYLC_SUITE_DEF_PATH="${HOME}/puma/mock-example/test-file14"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/users/lucy/puma/mock-example/test-file14"
+    export CYLC_SUITE_UUID="2f915934-4607-4c67-81e7-a5b27faaa1cb"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="20230101T0000Z/post/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root post"
+    export CYLC_TASK_DEPENDENCIES="model.20230101T0000Z"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export SCRIPT_NAME_POST VAR_C VAR_D FILE
+    SCRIPT_NAME_POST="script-post"
+    VAR_C="c"
+    VAR_D="d"
+    FILE="filename_cd.txt"
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+${SCRIPT_NAME_POST}.sh; sleep 10
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 20230101T0000Z/post/01

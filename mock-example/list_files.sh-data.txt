@@ -1,0 +1,1 @@
+-rwxr-xr-x 1 lucy users 40 Dec  6 17:14 ./list_files.sh

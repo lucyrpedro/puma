@@ -1,0 +1,48 @@
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2023
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = prep => model
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] => model => post
+    [[[R1/P0Y]]]  # Final cycle point.
+      graph = post => stop
+
+[runtime]
+  [[root]]  # Inherited by all tasks.
+    script = sleep 30
+  [[model]]
+   script = ${SCRIPT_NAME_MODEL}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME_MODEL = script-model
+      VAR_A = a
+      VAR_B = b
+      FILE = filename_ab.txt
+  [[prep]]
+    script = ${SCRIPT_NAME_PREP}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME_PREP = script-prep
+  [[post]]
+    script = ${SCRIPT_NAME_POST}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME_POST = script-post
+      VAR_C = c
+      VAR_D = d
+      FILE = filename_cd.txt
+  [[stop]]
+    script = ${SCRIPT_NAME_STOP}.sh; sleep 10
+    [[[environment]]]
+      SCRIPT_NAME_STOP = script-stop
+[visualization]
+  initial cycle point = 2021
+  final cycle point = 2023
+    [[node attributes]]
+        prep = "color=red"
+        model = "color=blue"
+        post = "color=green"
+	stop = "color=orange"

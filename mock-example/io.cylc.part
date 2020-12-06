@@ -1,0 +1,209 @@
+		[[[]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+118
+180
+815
+434
+631
+880
+691
+562
+
+
+
+
+155
+			precision.absolute_tolerance = 0.1
+		[[[]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+118
+180
+815
+435
+631
+934
+691
+562
+
+208
+
+
+
+155
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/prep/b.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/prep/b-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/model/a.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/model/b.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/model/ab-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/post/c.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/post/d.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20210101T0000Z/post/cd-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/model/a.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/model/b.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/model/ab-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/post/c.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/post/d.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20220101T0000Z/post/cd-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/model/a.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/model/b.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/model/ab-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/post/c.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/post/d.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/post/cd-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/stop/d.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./20230101T0000Z/stop/d-out.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 
+			precision.absolute_tolerance = 0.1
+		[[[./list_files.sh]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 40
+			precision.absolute_tolerance = 0.1
+		[[[./files.txt]]] # This is the name of the file
+			pattern = 1 day
+			lifetime = 5 years
+			type = product
+			datatype = float
+			size = 691
+			precision.absolute_tolerance = 0.1

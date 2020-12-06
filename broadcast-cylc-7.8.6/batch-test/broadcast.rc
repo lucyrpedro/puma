@@ -1,0 +1,16 @@
+#!jinja2
+{% set NTIMES = 6 %}
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set XIOS_NPROC = 4 %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+script = "echo World Hello!"
+[job]
+   batch system = slurm
+   execution time limit = PT10M
+[directives]
+   --ntasks={{TOT_NPROC}}
+   --partition=test
+   --chdir=/group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test

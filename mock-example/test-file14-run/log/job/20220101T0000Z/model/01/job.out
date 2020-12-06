@@ -1,0 +1,6 @@
+Suite    : mock01
+Task Job : 20220101T0000Z/model/01 (try 1)
+User@Host: lucy@cylc1.jasmin.ac.uk
+
+2020-12-06T17:17:08Z INFO - started
+2020-12-06T17:17:18Z INFO - succeeded

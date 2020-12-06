@@ -1,0 +1,57 @@
+2020-12-06T17:16:41Z INFO - Suite server: url=https://cylc1.jasmin.ac.uk:43035/ pid=22924
+2020-12-06T17:16:41Z INFO - Run: (re)start=0 log=1
+2020-12-06T17:16:41Z INFO - Cylc version: 7.8.6
+2020-12-06T17:16:41Z INFO - Run mode: live
+2020-12-06T17:16:41Z INFO - Initial point: 20210101T0000Z
+2020-12-06T17:16:41Z INFO - Final point: 20230101T0000Z
+2020-12-06T17:16:41Z INFO - Cold Start 20210101T0000Z
+2020-12-06T17:16:41Z INFO - [prep.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:16:42Z INFO - [prep.20210101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:16:42Z for job(01)
+2020-12-06T17:16:42Z INFO - [prep.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:16:43Z INFO - [prep.20210101T0000Z] status=submitted: (received)started at 2020-12-06T17:16:42Z for job(01)
+2020-12-06T17:16:43Z INFO - [prep.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:16:53Z INFO - [prep.20210101T0000Z] status=running: (received)succeeded at 2020-12-06T17:16:52Z for job(01)
+2020-12-06T17:16:54Z INFO - [model.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:16:55Z INFO - [model.20210101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:16:55Z for job(01)
+2020-12-06T17:16:55Z INFO - [model.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:16:56Z INFO - [model.20210101T0000Z] status=submitted: (received)started at 2020-12-06T17:16:55Z for job(01)
+2020-12-06T17:16:56Z INFO - [model.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:06Z INFO - [model.20210101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:05Z for job(01)
+2020-12-06T17:17:07Z INFO - [post.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:07Z INFO - [model.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:08Z INFO - [model.20220101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:08Z for job(01)
+2020-12-06T17:17:08Z INFO - [model.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:08Z INFO - [post.20210101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:08Z for job(01)
+2020-12-06T17:17:08Z INFO - [post.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:09Z INFO - [post.20210101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:08Z for job(01)
+2020-12-06T17:17:09Z INFO - [post.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:09Z INFO - [model.20220101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:08Z for job(01)
+2020-12-06T17:17:09Z INFO - [model.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:19Z INFO - [post.20210101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:19Z for job(01)
+2020-12-06T17:17:19Z INFO - [model.20220101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:18Z for job(01)
+2020-12-06T17:17:20Z INFO - [post.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:20Z INFO - [model.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:21Z INFO - [model.20230101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:21Z for job(01)
+2020-12-06T17:17:21Z INFO - [model.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:21Z INFO - [post.20220101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:21Z for job(01)
+2020-12-06T17:17:21Z INFO - [post.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:22Z INFO - [post.20220101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:21Z for job(01)
+2020-12-06T17:17:22Z INFO - [post.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:22Z INFO - [model.20230101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:21Z for job(01)
+2020-12-06T17:17:22Z INFO - [model.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:32Z INFO - [post.20220101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:32Z for job(01)
+2020-12-06T17:17:32Z INFO - [model.20230101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:32Z for job(01)
+2020-12-06T17:17:33Z INFO - [post.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:34Z INFO - [post.20230101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:34Z for job(01)
+2020-12-06T17:17:34Z INFO - [post.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:36Z INFO - [post.20230101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:35Z for job(01)
+2020-12-06T17:17:36Z INFO - [post.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:46Z INFO - [post.20230101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:45Z for job(01)
+2020-12-06T17:17:47Z INFO - [stop.20230101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2020-12-06T17:17:48Z INFO - [stop.20230101T0000Z] status=ready: (internal)submitted at 2020-12-06T17:17:48Z for job(01)
+2020-12-06T17:17:48Z INFO - [stop.20230101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2020-12-06T17:17:49Z INFO - [stop.20230101T0000Z] status=submitted: (received)started at 2020-12-06T17:17:48Z for job(01)
+2020-12-06T17:17:49Z INFO - [stop.20230101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2020-12-06T17:18:00Z INFO - [stop.20230101T0000Z] status=running: (received)succeeded at 2020-12-06T17:17:59Z for job(01)
+2020-12-06T17:18:00Z INFO - Suite shutting down - AUTOMATIC
+2020-12-06T17:18:00Z INFO - DONE

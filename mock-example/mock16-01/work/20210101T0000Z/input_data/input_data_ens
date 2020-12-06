@@ -1,0 +1,5 @@
+&input_data
+  filename = '/home/users/lucy/file.nc',
+  varname = 'u',
+  varname_xios = 'u',
+/

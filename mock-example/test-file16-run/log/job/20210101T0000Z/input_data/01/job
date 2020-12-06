@@ -1,0 +1,49 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: test-file16-run
+# Task: input_data.20210101T0000Z
+# Job log directory: 20210101T0000Z/input_data/01
+# Job submit method: background
+export CYLC_DIR='/apps/jasmin/metomi/cylc-7.8.6'
+export CYLC_VERSION='7.8.6'
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="20230101T0000Z"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="20210101T0000Z"
+    export CYLC_SUITE_NAME="test-file16-run"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="/home/users/lucy/cylc-run/test-file16-run"
+    export CYLC_SUITE_DEF_PATH="${HOME}/puma/mock-example/test-file16"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/users/lucy/puma/mock-example/test-file16"
+    export CYLC_SUITE_UUID="1bbd89a0-e04e-4a04-944c-9ed6966a5b87"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="20210101T0000Z/input_data/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root input_data"
+    export CYLC_TASK_DEPENDENCIES="prep.20210101T0000Z"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export SCRIPT_NAME INPUT_DATA_NML INPUT_DATA_NC
+    SCRIPT_NAME="create-input-data"
+    INPUT_DATA_NML="input_data_ens"
+    INPUT_DATA_NC="/home/users/lucy/file.nc"
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+${SCRIPT_NAME}.sh; sleep 10
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 20210101T0000Z/input_data/01

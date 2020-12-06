@@ -1,0 +1,24 @@
+#!jinja2
+{% set NTIMES = 6 %}
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set XIOS_NPROC = 4 %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+[scheduling]
+    [[dependencies]]
+        graph = "t1 => t2 => batch"
+[runtime]
+    [[t1]]
+        script = """
+cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast.rc" "${CYLC_SUITE_NAME}"
+"""
+    [[batch]]
+	script = "echo Hello World!"	
+	[[[job]]]
+		batch system = luciana
+		execution time limit = PT10M
+	[[[directives]]]
+		#--ntasks = {{TOT_NPROC}}
+		--partition = par-multi

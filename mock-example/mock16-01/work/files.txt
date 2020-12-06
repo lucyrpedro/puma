@@ -1,0 +1,12 @@
+./20210101T0000Z/xios_test_in/xios_test.in
+./20210101T0000Z/esdm-conf/esdm.conf
+./20210101T0000Z/xios_xml/iodef.xml
+./20210101T0000Z/input_data/input_data_ens
+./20210101T0000Z/model/variables.cylc
+./20220101T0000Z/model/variables.cylc
+./20230101T0000Z/model/variables.cylc
+./add-file.sh
+./calc-mean.sh
+./create-io-cylc.sh
+./list_files.sh
+./files.txt

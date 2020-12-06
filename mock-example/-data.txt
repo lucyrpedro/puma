@@ -1,0 +1,18 @@
+total 8
+-rwxr-xr-x 1 lucy users 118 Dec  6 19:49 create_files2.sh
+-rwxr-xr-x 1 lucy users 180 Dec  6 17:14 create_files.sh
+-rwxr-xr-x 1 lucy users 815 Dec  6 19:38 create-io-cylc2.sh
+-rwxr-xr-x 1 lucy users 435 Dec  6 19:53 create-io-cylc3.sh
+-rwxr-xr-x 1 lucy users 631 Dec  6 17:14 create-io-cylc.sh
+-rw-r--r-- 1 lucy users   0 Dec  6 19:53 -data.txt
+-rw-r--r-- 1 lucy users 691 Dec  6 19:50 files.txt
+-rw-r--r-- 1 lucy users 562 Dec  6 19:38 io.cylc
+-rw-r--r-- 1 lucy users  49 Dec  6 19:38 io.cylc-data.txt
+-rw-r--r-- 1 lucy users 208 Dec  6 19:51 io.cylc.part
+-rwxr-xr-x 1 lucy users  40 Dec  6 17:14 list_files.sh
+drwxr-xr-x 3 lucy users   0 Dec  6 17:19 mock
+drwxr-xr-x 6 lucy users   0 Dec  6 17:24 mock01
+-rwxr-xr-x 1 lucy users 155 Dec  6 17:14 read_files.sh
+-rwxr-xr-x 1 lucy users  90 Dec  6 17:14 sort_files.sh
+drwxr-xr-x 3 lucy users   0 Dec  6 17:11 test-file14
+drwxr-xr-x 6 lucy users   0 Dec  6 17:18 test-file14-run

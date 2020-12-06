@@ -1,0 +1,1 @@
+Goodbye World! from /home/users/lucy/puma/mock-example/test-file14/bin/script-prep.sh

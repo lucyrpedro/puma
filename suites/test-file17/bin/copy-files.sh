@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp $CYLC_TASK_WORK_DIR/* $CYLC_SUITE_SHARE_DIR/

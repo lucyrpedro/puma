@@ -1,0 +1,1 @@
+-rwxr-xr-x 1 lucy users 524 Dec  6 22:35 ./add-file.sh

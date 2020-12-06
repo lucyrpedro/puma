@@ -1,0 +1,159 @@
+# cylc-version: 7.8.6
+[cylc]
+    cycle point num expanded year digits = 0
+    UTC mode = False
+    required run mode = 
+    force run mode = 
+    [[reference test]]
+        live mode suite timeout = PT1M
+        dummy mode suite timeout = PT1M
+        dummy-local mode suite timeout = PT1M
+        suite shutdown event handler = cylc hook check-triggering
+        required run mode = 
+        simulation mode suite timeout = PT1M
+    [[authentication]]
+        public = 
+    [[events]]
+    [[simulation]]
+        disable suite event handlers = True
+[scheduling]
+    max active cycle points = 3
+    cycling mode = gregorian
+    initial cycle point = 20210101T0000Z
+    final cycle point = 20230101T0000Z
+    [[dependencies]]
+        [[[R1]]]
+            graph = prep => model
+        [[[R//P1Y]]]
+            graph = model[-P1Y] => model => post
+        [[[R1/P0Y]]]
+            graph = post => stop
+    [[queues]]
+        [[[default]]]
+            limit = 0
+            members = post, model, stop, prep
+    [[special tasks]]
+[meta]
+    URL = 
+    group = 
+    description = first suite
+    title = test suite
+[visualization]
+    edge penwidth = 2
+    default node attributes = style=unfilled, shape=ellipse
+    node penwidth = 2
+    initial cycle point = 2021
+    final cycle point = 2023
+    number of cycle points = 3
+    [[node groups]]
+        root = root, model, prep, post, stop
+    [[node attributes]]
+        prep = color=red
+        model = color=blue
+        post = color=green
+        stop = color=orange
+[runtime]
+    [[root]]
+        script = sleep 30
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[model]]
+        script = ${SCRIPT_NAME_MODEL}.sh; sleep 10
+        [[[environment]]]
+            SCRIPT_NAME_MODEL = script-model
+            VAR_A = a
+            VAR_B = b
+            FILE = filename_ab.txt
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[prep]]
+        script = ${SCRIPT_NAME_PREP}.sh; sleep 10
+        [[[environment]]]
+            SCRIPT_NAME_PREP = script-prep
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[post]]
+        script = ${SCRIPT_NAME_POST}.sh; sleep 10
+        [[[environment]]]
+            SCRIPT_NAME_POST = script-post
+            VAR_C = c
+            VAR_D = d
+            FILE = filename_cd.txt
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[stop]]
+        script = ${SCRIPT_NAME_STOP}.sh; sleep 10
+        [[[environment]]]
+            SCRIPT_NAME_STOP = script-stop
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True

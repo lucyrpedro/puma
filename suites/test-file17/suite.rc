@@ -17,11 +17,12 @@
 [scheduling]
   [[dependencies]]
       graph = """
-esdm-conf & input_data & xios_test_in & xios_xml => combine => run_xios_test
+esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
 	"""
 [runtime]
   [[root]]
     init-script = ${SCRIPT_NAME}
+    # script = copy-files.sh
     [[[environment]]]
       SCRIPT_NAME = init-script.sh
   [[batch]]
@@ -37,11 +38,12 @@ esdm-conf & input_data & xios_test_in & xios_xml => combine => run_xios_test
     [[[environment]]]
 #      SCRIPT_NAME = run-xios-test.sh
       SCRIPT_NAME = combine.sh
-      NUMENS = {{NUMENS}}
-      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
       MODEL_EXEC = {{MODEL_DIR}}/xios_test
       INPUT_DATA_NML = 'input_data_ens'
-      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
+      NUMENS = {{NUMENS}}
+      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      LAUNCH_MPI_XIOS = "-np {{XIOS_NPROC}}"
   [[esdm-conf]]
    script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -68,10 +70,6 @@ esdm-conf & input_data & xios_test_in & xios_xml => combine => run_xios_test
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-xios-xml.sh
-#  [[combine]]
- #   script = ${SCRIPT_NAME}
-  #  [[[environment]]]
-   #   SCRIPT_NAME = combine.sh
 [visualization]
     [[node attributes]]
         esdm-conf = "color=red"

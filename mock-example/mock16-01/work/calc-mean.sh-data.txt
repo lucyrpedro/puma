@@ -1,0 +1,1 @@
+-rwxr-xr-x 1 lucy users 211 Dec  6 22:35 ./calc-mean.sh

@@ -1,0 +1,1 @@
+-rw-r--r-- 1 lucy users 85 Dec  6 17:24 ./20210101T0000Z/post/c.txt
