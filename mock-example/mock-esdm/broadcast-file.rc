@@ -1,0 +1,4 @@
+[environment]
+      VAR_A = aaa
+      VAR_B = bbb
+      FILE = filenamefff.txt
