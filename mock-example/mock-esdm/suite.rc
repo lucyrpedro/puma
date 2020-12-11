@@ -18,7 +18,7 @@
   final cycle point = 2023
   [[dependencies]]
     [[[R1]]]  # Initial cycle point.
-      graph = prep => esdm-conf & input-data & xios-test-in & xios-xml => model
+      graph = prep => fix-esdm-conf => esdm-conf & input-data & xios-test-in & xios-xml => model
     [[[R//P1Y]]]  # Yearly cycling.
       graph = model[-P1Y] => model => post
     [[[R1/P0Y]]]  # Final cycle point.
@@ -26,26 +26,25 @@
 
 [runtime]
   [[root]]  # Inherited by all tasks.
-    script = sleep 5
+     script = copy-files-share.sh
+#    script = sleep 5
   [[prep]]
    script = ${SCRIPT_NAME}
+   post-script = copy-files-work.sh
     [[[environment]]]
       SCRIPT_NAME = init-script.sh
-  [[batch]]
-    inherit = prep
-    [[[job]]]
-        batch system = slurm
-        execution time limit = PT10M
-    [[[directives]]]
-        --ntasks={{TOT_NPROC}}
-        --partition=test
   [[esdm-conf]]
    script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-esdm-conf.sh
-      VAR_TYPE = POSIX
-      VAR_ID = p1
-      VAR_TARGET = ./posix1
+      VAR_TYPE = test # POSIX
+      VAR_ID = test # p1
+      VAR_TARGET = test # ./posix1
+  [[fix-esdm-conf]]
+  #   script = true
+    script = """
+    cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-posix.rc" "$CYLC_SUITE_NAME"
+    """
   [[input-data]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -66,7 +65,7 @@
     [[[environment]]]
       SCRIPT_NAME = create-xios-xml.sh
   [[run-xios-test]]
-    inherit = batch
+#    inherit = batch
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = run-xios-test.sh
@@ -84,6 +83,7 @@
       FILE = filename_ab.txt
   [[post]]
     script = ${SCRIPT_NAME}
+    post-script = run-script-create-io-cylc.sh
     [[[environment]]]
       SCRIPT_NAME = script-post.sh
       VAR_C = c
@@ -101,12 +101,12 @@
   initial cycle point = 2021
   final cycle point = 2023
     [[node attributes]]
-        esdm-conf = "color=red"
-        input-data = "color=blue"
-        xios-test = "color=green"
-        xios-xml = "color=orange"
-        model = "color=yellow"
+       # esdm-conf = "color=yellow"
+       # input-data = "color=skyblue"
+       # xios-test = "color=green"
+       # xios-xml = "color=orange"
+        model = "color=red"
         prep = "color=slategray"
-        post = "color=skyblue"
-        stop = "color=orangered"
-        var = "color=seagreen3"
+        post = "color=blue"
+       # stop = "color=orangered"
+       # var = "color=seagreen3"

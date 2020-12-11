@@ -6,9 +6,9 @@ cat > esdm.conf << EOF
         "esdm": {
                 "backends": [
                         {
-                                "type": "POSIX",
-                                "id": "p1",
-                                "target": "./_posix1"
+                                "type": $VAR_TYPE,
+                                "id": $VAR_ID,
+                                "target": $VAR_TARGET
                         }
                 ],
                 "metadata": {
