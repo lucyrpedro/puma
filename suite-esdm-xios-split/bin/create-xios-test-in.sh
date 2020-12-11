@@ -6,12 +6,12 @@ cat > xios_test.in << EOF
   do_regrid = .FALSE.,
   do_ens = .TRUE.,
   infile_data_base = '$INPUT_DATA_NML',
-  verbose = 1,
-  write_output = .FALSE.,
+  verbose = $VAR_VERBOSE,
+  write_output = $VAR_WRITE_OUTPUT,
   nprocx = $NPROCX,
   nprocy = $NPROCY,
   nt = $NTIMES,
-  ncopies = 20
+  ncopies = $VAR_NCOPIES
 /
 
 &input_ens

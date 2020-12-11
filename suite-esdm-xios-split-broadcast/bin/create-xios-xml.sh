@@ -31,17 +31,17 @@ cat > iodef.xml << EOF
     </grid_definition>
 
     <field_definition default_value="-1073741824.0" prec="8" >
-      <field id=$VAR_U check_if_active=".TRUE." grid_ref="grid_ens_in" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+      <field id="u" check_if_active=".TRUE." grid_ref="grid_ens_in" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
     </field_definition>
 
     <!-- <file_definition format="netcdf4" time_counter="instant" type="multiple_file" > -->
     <file_definition format="netcdf4" time_counter="instant" type="one_file" >
-      <file id="output" name=$VAR_NAME_OUTPUT output_freq=$VAR_OUTPUT_FREQ>
-        <field field_ref=$VAR_U operation="instant" />
+      <file id="output" name="esdm://ens_test" output_freq="1h">
+        <field field_ref="u" operation="instant" />
       </file>
-      <file id="output_ens" name=$VAR_NAME_OUTPUT_MEAN output_freq=$VAR_OUTPUT_FREQ_MEAN>
-        <field field_ref=$VAR_U name="u_ens" grid_ref="grid_ens_mean" operation="instant" />
-        <field field_ref=$VAR_U operation="instant" />
+      <file id="output_ens" name="esdm://ens_mean" output_freq="1h">
+        <field field_ref="u" name="u_ens" grid_ref="grid_ens_mean" operation="instant" />
+        <field field_ref="u" operation="instant" />
       </file>
     </file_definition>
   </context>
@@ -55,3 +55,6 @@ cat > iodef.xml << EOF
   </context>
 </simulation>
 EOF
+
+#cp iodef.xml $CYLC_SUITE_SHARE_DIR
+#cp iodef.xml ~/puma/suites/t16/bin

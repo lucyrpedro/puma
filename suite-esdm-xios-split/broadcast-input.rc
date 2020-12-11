@@ -1,7 +1,7 @@
 #!jinja2
 # the jinja2 script has to copied exactly as it is in the suite.rc
-{% set BROADCAST = False %}
 {% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set BROADCAST = False %}
 {% if BROADCAST %}
   {% set VAR_U = 'x' %}
 {% else %}

@@ -6,18 +6,16 @@ cat > esdm.conf << EOF
         "esdm": {
                 "backends": [
                         {
-                                "type": "POSIX",
-                                "id": "p1",
-                                "target": "./_posix1"
+                                "type": "$VAR_TYPE",
+                                "id": "$VAR_ID",
+                                "target": "$VAR_TARGET"
                         }
                 ],
                 "metadata": {
                         "type": "metadummy",
-                        "id": "md",                     "target": "./_metadummy"
+                        "id": "md",
+                        "target": "./_metadummy"
                 }
         }
 }
 EOF
-
-#cp esdm.conf $CYLC_SUITE_SHARE_DIR
-#cp esdm.conf ~/puma/suites/t16/bin

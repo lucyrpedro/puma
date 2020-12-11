@@ -1,0 +1,15 @@
+#!jinja2
+# the jinja2 script has to copied exactly as it is in the suite.rc
+{% set BROADCAST = False %}
+{% if BROADCAST %}
+  {% set VAR_U = 'x' %}
+{% else %}
+  {% set VAR_U = 'u' %}
+{% endif %}
+
+[environment]
+      VAR_NAME_OUTPUT = 'esdm://esdm_test'
+      VAR_NAME_OUTPUT_MEAN = 'esdm://esdm_mean'
+      VAR_OUTPUT_FREQ = "3h"
+      VAR_OUTPUT_FREQ_MEAN = "2h"
+      VAR_U = {{VAR_U}}

@@ -1,4 +1,6 @@
 #!jinja2
+
+{% set BROADCAST = False %}
 {% set NTIMES = 6 %}
 {% set NUMENS = 3 %}
 {% set NPROCX = 2 %}
@@ -9,6 +11,11 @@
 {% set NPROC = NPROCX*NPROCY %}
 {% set XIOS_NPROC = 4 %}
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+{% if BROADCAST %}
+	{% set VAR_U = 'x' %}
+{% else %}
+	{% set VAR_U = 'u' %}
+{% endif %}
 
 [meta]
   title = test suite
@@ -17,7 +24,7 @@
 [scheduling]
   [[dependencies]]
       graph = """
-esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
+broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
 	"""
 [runtime]
   [[root]]
@@ -25,6 +32,24 @@ esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
     # script = copy-files.sh
     [[[environment]]]
       SCRIPT_NAME = init-script.sh
+  [[broadcast-test]]
+  {% if not BROADCAST %}
+        script = """        
+	cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test-original.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml-original.rc" "${CYLC_SUITE_NAME}"
+	"""
+  {% else %}
+        script = """
+        cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test.rc" "${CYLC_SUITE_NAME}"
+        cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml.rc" "${CYLC_SUITE_NAME}"
+	"""
+  {% endif %}
   [[batch]]
     [[[job]]]
         batch system = slurm
@@ -32,28 +57,6 @@ esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
     [[[directives]]]
         --ntasks={{TOT_NPROC}}
         --partition=par-multi
-  [[run_xios_test]]
-    inherit = batch
-    script = ${SCRIPT_NAME}
-    [[[environment]]]
-#      SCRIPT_NAME = run-xios-test.sh
-      SCRIPT_NAME = combine.sh
-      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
-      MODEL_EXEC = {{MODEL_DIR}}/xios_test
-      INPUT_DATA_NML = 'input_data_ens'
-      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
-      NTIMES = {{NTIMES}}
-      NUMENS = {{NUMENS}}
-      NPROCX = {{NPROCX}}
-      NPROCY = {{NPROCY}}
-      XIOS_NPROC = {{XIOS_NPROC}}
-      NPROC = {{NPROC}}
-      TOT_NPROC = {{TOT_NPROC}}
-      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
-      LAUNCH_MPI_XIOS = "-np {{XIOS_NPROC}}"
-      MODEL_DIR_INPUT = {{MODEL_DIR_INPUT}}
-      MODEL_DIR = {{MODEL_DIR}}
-      XIOS_DIR = {{XIOS_DIR}}
   [[esdm-conf]]
    script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -67,6 +70,8 @@ esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
       SCRIPT_NAME = create-input-data.sh
       INPUT_DATA_NML = 'input_data_ens'
       INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+      VAR_VARNAME = {{VAR_U}}
+      VAR_VARNAME_XIOS = {{VAR_U}}
   [[xios_test_in]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -76,13 +81,42 @@ esdm-conf & input_data & xios_test_in & xios_xml => run_xios_test
       NPROCY = {{NPROCY}}
       NTIMES = {{NTIMES}}
       NUMENS = {{NUMENS}}
+      VAR_WRITE_OUTPUT = '.FALSE.'
+      VAR_VERBOSE = 1
+      VAR_NCOPIES = 20
   [[xios_xml]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-xios-xml.sh
+#      VAR_NAME_OUTPUT = 'esdm://ens_test'
+#      VAR_NAME_OUTPUT_MEAN = 'esdm://ens_mean'
+#      VAR_OUTPUT_FREQ = "1h"
+#      VAR_OUTPUT_FREQ_MEAN = "1h"
+#      VAR_U = {{VAR_U}}
+  [[run_xios_test]]
+    inherit = batch
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = run-xios-test-env.sh
+      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
+      MODEL_EXEC = {{MODEL_DIR}}/xios_test
+      INPUT_DATA_NML = 'input_data_ens'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+      MODEL_DIR_INPUT = {{MODEL_DIR_INPUT}}
+      MODEL_DIR = {{MODEL_DIR}}
+      XIOS_DIR = {{XIOS_DIR}}
+      NTIMES = {{NTIMES}}
+      NUMENS = {{NUMENS}}
+      NPROCX = {{NPROCX}}
+      NPROCY = {{NPROCY}}
+      NPROC = {{NPROC}}
+      XIOS_NPROC = {{XIOS_NPROC}}
+      TOT_NPROC = {{TOT_NPROC}}
+      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      LAUNCH_MPI_XIOS = "-np {{XIOS_NPROC}}"
 [visualization]
     [[node attributes]]
         esdm-conf = "color=red"
         input_data = "color=blue"
         xios_test_in = "color=green"
-	xios_xml = "color=orange"
+        xios_xml = "color=orange"

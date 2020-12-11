@@ -55,6 +55,3 @@ cat > iodef.xml << EOF
   </context>
 </simulation>
 EOF
-
-#cp iodef.xml $CYLC_SUITE_SHARE_DIR
-#cp iodef.xml ~/puma/suites/t16/bin
