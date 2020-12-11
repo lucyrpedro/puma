@@ -1,0 +1,14 @@
+#!jinja2
+# the jinja2 script has to copied exactly as it is in the suite.rc
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+{% if BROADCAST %}
+  {% set VAR_U = 'x' %}
+{% else %}
+  {% set VAR_U = 'u' %}
+{% endif %}
+
+[environment]
+      INPUT_DATA_NML = 'data_nml'
+      INPUT_DATA_NC = {{MODEL_DIR}}/u_plev_192x145x17.nc
+      VAR_VARNAME = {{VAR_U}}
+      VAR_VARNAME_XIOS = {{VAR_U}}

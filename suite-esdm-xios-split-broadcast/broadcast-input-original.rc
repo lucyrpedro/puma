@@ -1,0 +1,9 @@
+#!jinja2
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+{% set VAR_U = 'u' %}
+
+[environment]
+      INPUT_DATA_NML = 'input_data_ens'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+      VAR_VARNAME = {{VAR_U}}
+      VAR_VARNAME_XIOS = {{VAR_U}}
