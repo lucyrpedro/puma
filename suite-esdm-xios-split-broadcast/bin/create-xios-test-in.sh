@@ -19,7 +19,3 @@ cat > xios_test.in << EOF
   num_ens = $NUMENS
 /
 EOF
-
-#  verbose = $VAR_VERBOSE,
-#  write_output = $VAR_WRITE_OUTPUT,
-#  ncopies = $VAR_NCOPIES

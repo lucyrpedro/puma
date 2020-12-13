@@ -29,21 +29,21 @@ broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_t
     post-script = copy-files.sh
   [[broadcast-test]]
   {% if not BROADCAST %}
-        script = """        
-	cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test-original.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml-original.rc" "${CYLC_SUITE_NAME}"
-	"""
+        script = """
+          cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test-original.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml-original.rc" "${CYLC_SUITE_NAME}"
+	       """
   {% else %}
         script = """
-        cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test.rc" "${CYLC_SUITE_NAME}"
-        cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml.rc" "${CYLC_SUITE_NAME}"
-	"""
+          cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'input_data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'xios_test_in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test.rc" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'xios_xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml.rc" "${CYLC_SUITE_NAME}"
+	       """
   {% endif %}
   [[batch]]
     [[[job]]]
