@@ -1,11 +1,7 @@
 #!jinja2
 {% set MODEL_DIR_INPUT = '/home/users/lucy' %}
-{% set BROADCAST = False %}
-{% if BROADCAST %}
-  {% set VAR_U = 'x' %}
-{% else %}
-  {% set VAR_U = 'u' %}
-{% endif %}
+{% set VAR_U = 'u' %}
+{% set VAR_V = 'v' %}
 
 [environment]
       INPUT_DATA_NML = 'input_data_ens'

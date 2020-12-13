@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Create input namelist file
+
 cat > xios_test.in << EOF
 &input
   do_regrid = .FALSE.,
@@ -19,5 +20,6 @@ cat > xios_test.in << EOF
 /
 EOF
 
-#cp xios_test.in $CYLC_SUITE_SHARE_DIR
-#cp xios_test.in ~/puma/suites/t16/bin
+#  verbose = $VAR_VERBOSE,
+#  write_output = $VAR_WRITE_OUTPUT,
+#  ncopies = $VAR_NCOPIES

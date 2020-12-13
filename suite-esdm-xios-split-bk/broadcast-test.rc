@@ -1,5 +1,5 @@
 [environment]
       INPUT_DATA_NML = 'input_data_ens'
-      VAR_WRITE_OUTPUT = .FALSE.
+      VAR_WRITE_OUTPUT = '.FALSE.'
       VAR_VERBOSE = 1
       VAR_NCOPIES = 20

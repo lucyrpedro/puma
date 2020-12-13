@@ -1,11 +1,7 @@
 #!jinja2
 # the jinja2 script has to copied exactly as it is in the suite.rc
-{% set BROADCAST = False %}
-{% if BROADCAST %}
-  {% set VAR_U = 'x' %}
-{% else %}
-  {% set VAR_U = 'u' %}
-{% endif %}
+{% set VAR_U = 'u' %}
+{% set VAR_V = 'v' %}
 
 [environment]
       VAR_NAME_OUTPUT = 'esdm://ens_test'

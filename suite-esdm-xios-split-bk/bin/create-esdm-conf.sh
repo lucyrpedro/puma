@@ -8,7 +8,7 @@ cat > esdm.conf << EOF
                         {
                                 "type": "$VAR_TYPE",
                                 "id": "$VAR_ID",
-                                "target": "$VAR_TARGET"
+                                "target": "./_posix1"
                         }
                 ],
                 "metadata": {

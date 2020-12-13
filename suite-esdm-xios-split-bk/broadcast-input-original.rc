@@ -1,7 +1,6 @@
 #!jinja2
 {% set MODEL_DIR_INPUT = '/home/users/lucy' %}
 {% set VAR_U = 'u' %}
-{% set VAR_V = 'v' %}
 
 [environment]
       INPUT_DATA_NML = 'input_data_ens'

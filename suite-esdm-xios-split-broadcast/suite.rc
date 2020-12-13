@@ -11,11 +11,8 @@
 {% set NPROC = NPROCX*NPROCY %}
 {% set XIOS_NPROC = 4 %}
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
-{% if BROADCAST %}
-	{% set VAR_U = 'x' %}
-{% else %}
-	{% set VAR_U = 'u' %}
-{% endif %}
+{% set VAR_U = 'u' %}
+{% set VAR_V = 'v' %}
 
 [meta]
   title = test suite
@@ -28,12 +25,10 @@ broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_t
 	"""
 [runtime]
   [[root]]
-    init-script = ${SCRIPT_NAME}
-    # script = copy-files.sh
-    [[[environment]]]
-      SCRIPT_NAME = init-script.sh
+    init-script = init-script.sh
+    post-script = copy-files.sh
   [[broadcast-test]]
-  {% if BROADCAST %}
+  {% if not BROADCAST %}
         script = """        
 	cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
         cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
@@ -61,17 +56,10 @@ broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_t
    script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-esdm-conf.sh
-      VAR_TYPE = POSIX
-      VAR_ID = p1
-      VAR_TARGET = ./posix1
   [[input_data]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-input-data.sh
-      INPUT_DATA_NML = 'input_data_ens'
-      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
-      VAR_VARNAME = {{VAR_U}}
-      VAR_VARNAME_XIOS = {{VAR_U}}
   [[xios_test_in]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -81,18 +69,10 @@ broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_t
       NPROCY = {{NPROCY}}
       NTIMES = {{NTIMES}}
       NUMENS = {{NUMENS}}
-      VAR_WRITE_OUTPUT = '.FALSE.'
-      VAR_VERBOSE = 1
-      VAR_NCOPIES = 20
   [[xios_xml]]
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-xios-xml.sh
-#      VAR_NAME_OUTPUT = 'esdm://ens_test'
-#      VAR_NAME_OUTPUT_MEAN = 'esdm://ens_mean'
-#      VAR_OUTPUT_FREQ = "1h"
-#      VAR_OUTPUT_FREQ_MEAN = "1h"
-#      VAR_U = {{VAR_U}}
   [[run_xios_test]]
     inherit = batch
     script = ${SCRIPT_NAME}
@@ -118,5 +98,5 @@ broadcast-test => esdm-conf & input_data & xios_test_in & xios_xml => run_xios_t
     [[node attributes]]
         esdm-conf = "color=red"
         input_data = "color=blue"
-        xios_test_in = "color=green"
+        xios_test_in = "color=seagreen3"
         xios_xml = "color=orange"
