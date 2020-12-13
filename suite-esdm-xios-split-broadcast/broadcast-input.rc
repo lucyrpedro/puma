@@ -5,7 +5,7 @@
 {% set VAR_V = 'v' %}
 
 [environment]
-      INPUT_DATA_NML = 'data_nml'
+      INPUT_DATA_NML = 'input_data_ens'
       INPUT_DATA_NC = {{MODEL_DIR}}/u_plev_192x145x17.nc
-      VAR_VARNAME = {{VAR_V}}
-      VAR_VARNAME_XIOS = {{VAR_V}}
+      VAR_VARNAME = {{VAR_U}}
+      VAR_VARNAME_XIOS = {{VAR_U}}
