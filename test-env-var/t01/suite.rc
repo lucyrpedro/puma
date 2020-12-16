@@ -1,0 +1,17 @@
+#!Jinja2
+
+[scheduling]
+    [[dependencies]]
+            graph="hello => BYE"
+[runtime]
+    [[hello]]
+MULTI = {{environ["CYLC_TEST_BROADCAST"]}}
+{% if MULTI %}
+  	script = "echo Testing Broadcast: $test_broadcast"
+{% else %}
+  	script = "echo Testing Broadcast: $test_broadcast"
+{% endif %}
+         [[[environment]]]
+            test_broadcast = {{environ["CYLC_TEST_BROADCAST"]}}
+    [[BYE]]
+        script = "echo Goodbye World!"

@@ -1,6 +1,6 @@
 #!jinja2
 
-{% set BROADCAST = True %}
+{% set BROADCAST = False %}
 {% set NTIMES = 6 %}
 {% set NUMENS = 3 %}
 {% set NPROCX = 2 %}
@@ -41,7 +41,7 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
           cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input.rc" "${CYLC_SUITE_NAME}"
           cylc broadcast -n 'xios-test-in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test.rc" "${CYLC_SUITE_NAME}"
           cylc broadcast -n 'xios-xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml.rc" "${CYLC_SUITE_NAME}"
-          cylc broadcast -n 'run-xios-test' -s "[environment]INPUT_DATA_NML=data_input" "${CYLC_SUITE_NAME}"
+          cylc broadcast -n 'run-xios-test' -s "[environment]INPUT_DATA_NML=data-input" "${CYLC_SUITE_NAME}"
 	"""
   {% endif %}
   [[batch]]

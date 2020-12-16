@@ -1,0 +1,20 @@
+[runtime]
+  [[root]]
+    [[[environment]]]
+      SUITE_OWNER_HOME_DIR_ON_SUITE_HOST = {{environ['HOME']}}
+      host_name = $HOSTNAME
+[scheduling]
+    [[dependencies]]
+        graph = "hello"
+[runtime]
+    [[hello]]
+        script = """
+	  echo Hello World!
+	  echo hostname: $HOSTNAME
+	  if [[ $BROADCAST == "true" ]]; then
+		echo broadcast is true: $BROADCAST
+	  else
+		echo broadcast is false: $BROADCAST
+	  fi
+	  echo hostname: $host_name
+	"""

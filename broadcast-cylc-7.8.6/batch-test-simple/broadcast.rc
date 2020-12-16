@@ -1,0 +1,8 @@
+script = "echo World Hello!"
+[job]
+   batch system = slurm
+   execution time limit = PT10M
+[directives]
+   --ntasks=4
+   --partition=test
+   --chdir=/group_workspaces/jasmin4/ncas_cms/glister/esdm/slurm_chdir_test

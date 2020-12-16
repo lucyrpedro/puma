@@ -1,0 +1,15 @@
+#!jinja2
+# the jinja2 script has to copied exactly as it is in the suite.rc
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set XIOS_NPROC = 4 %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+
+[job]
+	batch system = slurm
+	execution time limit = PT10M
+[directives]
+	--ntasks={{TOT_NPROC}}            
+	--partition=test

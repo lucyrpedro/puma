@@ -1,0 +1,11 @@
+#!Jinja2
+[runtime]
+  [[root]]
+    [[[environment]]]
+      SUITE_OWNER_HOME_DIR_ON_SUITE_HOST = {{environ['HOME']}}
+[scheduling]
+    [[dependencies]]
+        graph = "hello"
+[runtime]
+    [[hello]]
+        script = "echo Hello World!"
