@@ -36,10 +36,10 @@ cat > iodef.xml << EOF
 
     <!-- <file_definition format="netcdf4" time_counter="instant" type="multiple_file" > -->
     <file_definition format="netcdf4" time_counter="instant" type="one_file" >
-      <file id="output" name="esdm://ens_test" output_freq="1h">
+      <file id="output" name="$VAR_NAME_OUTPUT" output_freq="$VAR_OUTPUT_FREQ">
         <field field_ref="u" operation="instant" />
       </file>
-      <file id="output_ens" name="esdm://ens_mean" output_freq="1h">
+      <file id="output_ens" name="$VAR_NAME_OUTPUT_MEAN" output_freq="$VAR_OUTPUT_FREQ_MEAN">
         <field field_ref="u" name="u_ens" grid_ref="grid_ens_mean" operation="instant" />
         <field field_ref="u" operation="instant" />
       </file>
