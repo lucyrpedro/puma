@@ -14,10 +14,13 @@
   title = test suite esdm-xios with cylc broadcast
   description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into de original suite are introduced using cylc broadcast.
 [scheduling]
+    initial cycle point = 20130808T00
+    final cycle point = 20130812T00
   [[dependencies]]
+     [[[T00]]]
       graph = """
-broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
-	"""
+        broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
+	      """
 [runtime]
   [[root]]
     init-script = init-script.sh
@@ -27,7 +30,9 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
 # BROADCAST is an environment variable that can be set true or false
 # On command line, export BROADCAST=true, or export BROADCAST=false
      script = """
-	if [[ $BROADCAST == "true" ]]; then
+	BROADCAST=$(($RANDOM%2))
+	echo "BROADCAST=$BROADCAST"
+	if [[ $BROADCAST == 0 ]]; then
             cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"

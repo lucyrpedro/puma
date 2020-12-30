@@ -2,5 +2,5 @@
 	batch system = slurm
 	execution time limit = PT10M
 [directives]
-	--ntasks=8 # original value = 16
+	--ntasks=16
 	--partition=test

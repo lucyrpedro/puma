@@ -1,0 +1,7 @@
+#!jinja2
+# the jinja2 script has to copied exactly as it is in the suite.rc
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+
+[environment]
+      INPUT_DATA_NML = 'data_input'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc

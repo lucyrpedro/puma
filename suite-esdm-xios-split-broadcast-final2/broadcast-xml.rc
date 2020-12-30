@@ -1,0 +1,5 @@
+[environment]
+      VAR_NAME_OUTPUT = 'esdm://esdm_test'
+      VAR_NAME_OUTPUT_MEAN = 'esdm://esdm_mean'
+      VAR_OUTPUT_FREQ = "3h"
+      VAR_OUTPUT_FREQ_MEAN = "2h"
