@@ -1,0 +1,6 @@
+[job]
+	batch system = slurm
+	execution time limit = PT10M
+[directives]
+	--ntasks=16
+	--partition=test

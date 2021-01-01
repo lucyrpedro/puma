@@ -1,0 +1,99 @@
+#!jinja2
+{% set NTIMES = 6 %}
+{% set NUMENS = 3 %}
+{% set NPROCX = 2 %}
+{% set NPROCY = 2 %}
+{% set MODEL_DIR_INPUT = '/home/users/lucy' %}
+{% set MODEL_DIR = '/group_workspaces/jasmin4/ncas_cms/glister/esdm/jasmin_centos_7.7_gcc_9.1.0_esdm' %}
+{% set XIOS_DIR = '/home/users/jcole/software/xios_trunk_r1870/config_GCC_LINUX_ESDM_dev' %}
+{% set NPROC = NPROCX*NPROCY %}
+{% set XIOS_NPROC = 4 %}
+{% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
+
+[meta]
+  title = test suite esdm-xios with cylc broadcast
+  description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into the original suite are introduced using cylc broadcast.
+[scheduling]
+    initial cycle point = 20200810T00
+    final cycle point = 20200812T00
+  [[dependencies]]
+     [[[T00]]]
+      graph = """
+        broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
+	      """
+[runtime]
+  [[root]]
+    init-script = init-script.sh
+    post-script = copy-files.sh
+# Move all the created files to the share directory. For the original suite to work, all files have to be in the same directory.
+  [[broadcast-test]]
+# BROADCAST should be an environment variable that can be set true or false. On the command line, export BROADCAST=true, or export BROADCAST=false. Here we are testing with a random variable that sets the broadcast true or false.
+     script = """
+	BROADCAST=$(($RANDOM%2))
+	echo "BROADCAST=$BROADCAST"
+	echo -e "\n\nTest Cylc + ESDM\nCycle Point: $CYLC_TASK_CYCLE_POINT\nBROADCAST: $BROADCAST\n(0: broadcast with original values; 1: broadcast with new values)\n\n"
+	if [[ $BROADCAST == 0 ]]; then
+            cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'xios-test-in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test-original.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'xios-xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml-original.rc" "${CYLC_SUITE_NAME}"
+	else
+            cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'xios-test-in' -F "${CYLC_SUITE_DEF_PATH}/broadcast-test.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'xios-xml' -F "${CYLC_SUITE_DEF_PATH}/broadcast-xml.rc" "${CYLC_SUITE_NAME}"
+            cylc broadcast -n 'run-xios-test' -s "[environment]INPUT_DATA_NML=data_input" "${CYLC_SUITE_NAME}"
+	fi
+	  """
+  [[esdm-conf]]
+   script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-esdm-conf.sh
+  [[input-data]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-input-data.sh
+  [[xios-test-in]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-test-in.sh
+      INPUT_DATA_NML = 'input_data_ens'
+      NPROCX = {{NPROCX}}
+      NPROCY = {{NPROCY}}
+      NTIMES = {{NTIMES}}
+      NUMENS = {{NUMENS}}
+  [[xios-xml]]
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = create-xios-xml.sh
+  [[batch]]
+    script = true
+  [[run-xios-test]]
+    inherit = batch
+    script = ${SCRIPT_NAME}
+    [[[environment]]]
+      SCRIPT_NAME = run-xios-test-env.sh
+      XIOS_EXEC = {{XIOS_DIR}}/bin/xios_server.exe
+      MODEL_EXEC = {{MODEL_DIR}}/xios_test
+      INPUT_DATA_NML = 'input_data_ens'
+      INPUT_DATA_NC = {{MODEL_DIR_INPUT}}/file.nc
+      MODEL_DIR_INPUT = {{MODEL_DIR_INPUT}}
+      MODEL_DIR = {{MODEL_DIR}}
+      XIOS_DIR = {{XIOS_DIR}}
+      NTIMES = {{NTIMES}}
+      NUMENS = {{NUMENS}}
+      NPROCX = {{NPROCX}}
+      NPROCY = {{NPROCY}}
+      NPROC = {{NPROC}}
+      XIOS_NPROC = {{XIOS_NPROC}}
+      TOT_NPROC = {{TOT_NPROC}}
+      LAUNCH_MPI_MODEL = "-np {{NPROC}}"
+      LAUNCH_MPI_XIOS = "-np {{XIOS_NPROC}}"
+[visualization]
+    [[node attributes]]
+        esdm-conf = "color=red"
+        input-data = "color=blue"
+        xios-test-in = "color=green3"
+        xios-xml = "color=orange"
