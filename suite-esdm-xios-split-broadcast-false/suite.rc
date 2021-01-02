@@ -1,5 +1,4 @@
 #!jinja2
-
 {% set BROADCAST = False %}
 {% set NTIMES = 6 %}
 {% set NUMENS = 3 %}
@@ -13,14 +12,13 @@
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
 
 [meta]
-  title = test suite
-  description = first suite
-# This is what my suite does:...
+  title = test suite esdm-xios with cylc broadcast (jinja2 variable)
+  description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into the original suite are introduced using cylc broadcast.
 [scheduling]
   [[dependencies]]
       graph = """
-broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
-	"""
+        broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
+      """
 [runtime]
   [[root]]
     init-script = init-script.sh
@@ -44,13 +42,6 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
           cylc broadcast -n 'run-xios-test' -s "[environment]INPUT_DATA_NML=data-input" "${CYLC_SUITE_NAME}"
 	"""
   {% endif %}
-  [[batch]]
-    [[[job]]]
-        batch system = luciana
-        execution time limit = PT10M
-    [[[directives]]]
-        --ntasks=123
-        --partition=test
   [[esdm-conf]]
    script = ${SCRIPT_NAME}
     [[[environment]]]
@@ -72,6 +63,13 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
     script = ${SCRIPT_NAME}
     [[[environment]]]
       SCRIPT_NAME = create-xios-xml.sh
+  [[batch]]
+    [[[job]]]
+        batch system = luciana
+        execution time limit = PT10M
+    [[[directives]]]
+        --ntasks=123
+        --partition=test
   [[run-xios-test]]
     inherit = batch
     script = ${SCRIPT_NAME}
@@ -97,5 +95,5 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
     [[node attributes]]
         esdm-conf = "color=red"
         input-data = "color=blue"
-        xios-test-in = "color=seagreen3"
+        xios-test-in = "color=green3"
         xios-xml = "color=orange"

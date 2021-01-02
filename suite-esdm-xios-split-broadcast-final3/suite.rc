@@ -11,7 +11,7 @@
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
 
 [meta]
-  title = test suite esdm-xios with cylc broadcast
+  title = test suite esdm-xios with cylc broadcast (random variable, multi cycle)
   description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into the original suite are introduced using cylc broadcast.
 [scheduling]
     initial cycle point = 20200810T00
@@ -20,7 +20,7 @@
      [[[T00]]]
       graph = """
         broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
-	      """
+      """
 [runtime]
   [[root]]
     init-script = init-script.sh

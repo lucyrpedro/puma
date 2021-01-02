@@ -11,13 +11,13 @@
 {% set TOT_NPROC = NUMENS*NPROC + XIOS_NPROC %}
 
 [meta]
-  title = test suite esdm-xios with cylc broadcast
-  description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into de original suite are introduced using cylc broadcast.
+  title = test suite esdm-xios with cylc broadcast (system environment variable)
+  description = This suite adapts the esdm-xios suite to run with cylc broadcast. The original suite is split into files and modifications into the original suite are introduced using cylc broadcast.
 [scheduling]
   [[dependencies]]
       graph = """
-broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
-	"""
+        broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-test
+      """
 [runtime]
   [[root]]
     init-script = init-script.sh
@@ -25,9 +25,9 @@ broadcast-test => esdm-conf & input-data & xios-test-in & xios-xml => run-xios-t
 # Move all the created files to the share directory. For the original suite to work, all files have to be in the same directory.
   [[broadcast-test]]
 # BROADCAST is an environment variable that can be set true or false
-# On command line, export BROADCAST=true, or export BROADCAST=false
+# On command line, before running the suite, export BROADCAST=0, or export BROADCAST=1
      script = """
-	if [[ $BROADCAST == "true" ]]; then
+	if [[ $BROADCAST == 0 ]]; then
             cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"
