@@ -1,0 +1,24 @@
+[scheduling]
+    initial cycle point = 20200810T00
+    final cycle point = 20200812T00
+  [[dependencies]]
+     [[[T00]]]
+      graph = """
+        broadcast-test -> test
+	      """
+[runtime]
+  [[broadcast-test]]
+# BROADCAST should be an environment variable that can be set true or false. On the command line, export BROADCAST=true, or export BROADCAST=false. Here we are testing with a random variable that sets the broadcast true or false.
+     script = """
+	BROADCAST=$(($RANDOM%2))
+	echo "BROADCAST=$BROADCAST"
+	if [[ $BROADCAST == 0 ]]; then
+            cylc broadcast -n 'test' -s "[environment]VAR=0" "${CYLC_SUITE_NAME}"
+	else
+            cylc broadcast -n 'test' -s "[environment]VAR=1" "${CYLC_SUITE_NAME}"
+	fi
+	  """
+  [[test]]
+   script = echo "VAR = $VAR"; echo "BROADCAST=$BROADCAST"
+    [[[environment]]]
+      VAR = 2
