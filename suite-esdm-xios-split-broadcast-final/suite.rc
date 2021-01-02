@@ -25,9 +25,9 @@
 # Move all the created files to the share directory. For the original suite to work, all files have to be in the same directory.
   [[broadcast-test]]
 # BROADCAST is an environment variable that can be set true or false
-# On command line, before running the suite, export BROADCAST=0, or export BROADCAST=1
+# On command line, before running the suite, export BROADCAST=false or export BROADCAST=true
      script = """
-	if [[ $BROADCAST == 0 ]]; then
+	if [[ $BROADCAST == false ]]; then
             cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'input-data' -F "${CYLC_SUITE_DEF_PATH}/broadcast-input-original.rc" "${CYLC_SUITE_NAME}"

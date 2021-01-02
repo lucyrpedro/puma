@@ -30,8 +30,7 @@
 # BROADCAST should be an environment variable that can be set true or false. On the command line, export BROADCAST=true, or export BROADCAST=false. Here we are testing with a random variable that sets the broadcast true or false.
      script = """
 	BROADCAST=$(($RANDOM%2))
-	echo "BROADCAST=$BROADCAST"
-	echo -e "\n\nTest Cylc + ESDM\nCycle Point: $CYLC_TASK_CYCLE_POINT\nBROADCAST: $BROADCAST\n(0: broadcast with original values; 1: broadcast with new values)\n\n"
+	echo -e "\nTest Cylc + ESDM\nCycle Point: $CYLC_TASK_CYCLE_POINT\nBROADCAST: $BROADCAST\n(0: broadcast with original values; 1: broadcast with new values)\n"
 	if [[ $BROADCAST == 0 ]]; then
             cylc broadcast -n 'batch' -F "${CYLC_SUITE_DEF_PATH}/broadcast-batch-original.rc" "${CYLC_SUITE_NAME}"
             cylc broadcast -n 'esdm-conf' -F "${CYLC_SUITE_DEF_PATH}/broadcast-esdm-original.rc" "${CYLC_SUITE_NAME}"
