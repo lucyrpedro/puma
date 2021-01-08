@@ -1,0 +1,39 @@
+2021-01-08T17:43:40Z INFO - Suite server: url=https://cylc1.jasmin.ac.uk:43047/ pid=31886
+2021-01-08T17:43:40Z INFO - Run: (re)start=0 log=1
+2021-01-08T17:43:40Z INFO - Cylc version: 7.8.6
+2021-01-08T17:43:40Z INFO - Run mode: live
+2021-01-08T17:43:40Z INFO - Initial point: 20210101T0000Z
+2021-01-08T17:43:40Z INFO - Final point: 20220101T0000Z
+2021-01-08T17:43:40Z INFO - Cold Start 20210101T0000Z
+2021-01-08T17:43:40Z INFO - [prep.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T17:43:41Z INFO - [prep.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T17:43:41Z for job(01)
+2021-01-08T17:43:41Z INFO - [prep.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:42Z INFO - [prep.20210101T0000Z] status=submitted: (received)started at 2021-01-08T17:43:42Z for job(01)
+2021-01-08T17:43:42Z INFO - [prep.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:43Z INFO - [prep.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T17:43:42Z for job(01)
+2021-01-08T17:43:44Z INFO - [model.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T17:43:45Z INFO - [model.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T17:43:45Z for job(01)
+2021-01-08T17:43:45Z INFO - [model.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:46Z INFO - [model.20210101T0000Z] status=submitted: (received)started at 2021-01-08T17:43:46Z for job(01)
+2021-01-08T17:43:46Z INFO - [model.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:48Z INFO - [model.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T17:43:47Z for job(01)
+2021-01-08T17:43:49Z INFO - [post.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T17:43:50Z INFO - [post.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T17:43:50Z for job(01)
+2021-01-08T17:43:50Z INFO - [post.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:51Z INFO - [post.20210101T0000Z] status=submitted: (received)started at 2021-01-08T17:43:50Z for job(01)
+2021-01-08T17:43:51Z INFO - [post.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T17:43:54Z CRITICAL - [post.20210101T0000Z] status=running: (received)failed/EXIT at 2021-01-08T17:43:54Z for job(01)
+2021-01-08T17:43:54Z CRITICAL - [post.20210101T0000Z] -job(01) failed
+2021-01-08T17:43:55Z WARNING - suite stalled
+2021-01-08T17:43:55Z WARNING - Unmet prerequisites for broadcast-test.20210101T0000Z:
+2021-01-08T17:43:55Z WARNING -  * post.20210101T0000Z succeeded
+2021-01-08T17:43:55Z WARNING -  * post.20210101T0000Z succeeded
+2021-01-08T17:43:56Z INFO - [('suite-event-handler', 'stalled') cmd]
+	mail -s '[suite stalled] t5' -r notifications@cylc1.jasmin.ac.uk lucy <<<'suite event: stalled
+	reason: suite stalled
+	suite: t5
+	host: cylc1.jasmin.ac.uk
+	port: 43047
+	owner: lucy
+	'
+	[('suite-event-handler', 'stalled') ret_code] 0

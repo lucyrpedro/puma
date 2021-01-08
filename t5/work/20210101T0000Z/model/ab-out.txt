@@ -1,0 +1,1 @@
+Goodbye World! from /home/users/lucy/puma/mock-example/eios/bin/script-model.sh

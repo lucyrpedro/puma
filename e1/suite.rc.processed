@@ -50,10 +50,11 @@ echo "FILE=$FILE"
 	fi
 echo "FILE=$FILE"
 
-# If the size is less than equal to the mean of all files, 
+# If the size is less than equal to the mean of all files,
 # set BROADCAST to 1 and send the next file to SHARE
 
 #	MEAN=$(< $CYLC_SUITE_RUN_DIR/post/mean.txt)
+#	echo "DIR=$CYLC_SUITE_RUN_DIR/post/calc-mean.sh"
 	echo "SIZE=$SIZE"
 	MEAN=9000
 
@@ -78,4 +79,3 @@ echo "DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model"
         model = "color=blue"
         post = "color=green3"
         broadcast-test = "color=red"
-

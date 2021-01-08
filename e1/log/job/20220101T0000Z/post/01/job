@@ -1,0 +1,41 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: e1
+# Task: post.20220101T0000Z
+# Job log directory: 20220101T0000Z/post/01
+# Job submit method: background
+export CYLC_DIR='/apps/jasmin/metomi/cylc-7.8.6'
+export CYLC_VERSION='7.8.6'
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="20220101T0000Z"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="20210101T0000Z"
+    export CYLC_SUITE_NAME="e1"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="/home/users/lucy/cylc-run/e1"
+    export CYLC_SUITE_DEF_PATH="${HOME}/puma/mock-example/eios-test"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/users/lucy/puma/mock-example/eios-test"
+    export CYLC_SUITE_UUID="3896972d-5e09-4988-90fb-62d01fdf4258"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="20220101T0000Z/post/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root post"
+    export CYLC_TASK_DEPENDENCIES="model.20220101T0000Z"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+run-script-create-io-cylc.sh
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 20220101T0000Z/post/01

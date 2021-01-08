@@ -1,0 +1,8 @@
+Suite    : e1
+Task Job : 20210101T0000Z/model/01 (try 1)
+User@Host: lucy@cylc1.jasmin.ac.uk
+
+DIR=/home/users/lucy/cylc-run/e1/work/20210101T0000Z/model
+RANDOM-NUMBER=735
+2021-01-08T18:01:50Z INFO - started
+2021-01-08T18:01:51Z INFO - succeeded

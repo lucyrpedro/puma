@@ -1,0 +1,208 @@
+# cylc-version: 7.8.6
+[cylc]
+    cycle point num expanded year digits = 0
+    UTC mode = False
+    required run mode = 
+    force run mode = 
+    [[reference test]]
+        live mode suite timeout = PT1M
+        dummy mode suite timeout = PT1M
+        dummy-local mode suite timeout = PT1M
+        suite shutdown event handler = cylc hook check-triggering
+        required run mode = 
+        simulation mode suite timeout = PT1M
+    [[authentication]]
+        public = 
+    [[events]]
+    [[simulation]]
+        disable suite event handlers = True
+[scheduling]
+    max active cycle points = 3
+    cycling mode = gregorian
+    initial cycle point = 20210101T0000Z
+    final cycle point = 20220101T0000Z
+    [[dependencies]]
+        [[[R1]]]
+            graph = prep => model => post => broadcast-test
+        [[[R//P1Y]]]
+            graph = model[-P1Y] & broadcast-test[-P1Y] => model => post => broadcast-test
+        [[[R1/P0Y]]]
+            graph = model => stop
+    [[queues]]
+        [[[default]]]
+            limit = 0
+            members = broadcast-test, post, stop, model, prep
+    [[special tasks]]
+[meta]
+    URL = 
+    group = 
+    description = first suite
+    title = test suite
+[visualization]
+    edge penwidth = 2
+    default node attributes = style=unfilled, shape=ellipse
+    node penwidth = 2
+    initial cycle point = 2021
+    final cycle point = 2022
+    number of cycle points = 3
+    [[node groups]]
+        root = root, prep, model, post, broadcast-test, stop
+    [[node attributes]]
+        prep = color=orange
+        model = color=blue
+        post = color=green3
+        broadcast-test = color=red
+[runtime]
+    [[root]]
+        script = sleep 1
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[prep]]
+        script = copy-files-post.sh
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[model]]
+        script = ${SCRIPT_NAME_MODEL};
+        pre-script = create-share-dir.sh
+        [[[environment]]]
+            SCRIPT_NAME_MODEL = script-model.sh
+            VAR_A = a
+            VAR_B = b
+            FILE = filename_ab.txt
+            VAR_DIR = $CYLC_TASK_WORK_DIR
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[post]]
+        script = run-script-create-io-cylc.sh
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[broadcast-test]]
+        script = """
+            # BROADCAST=0 => the file is placed in the WORK directory
+            # BROADCAST=1 => the file is placed in the SHARE directory
+            	BROADCAST=0
+            
+            # Test if previous file is in the WORK directory and save its size
+                    FILE=$CYLC_SUITE_WORK_DIR/$CYLC_TASK_CYCLE_POINT/model/b.txt
+                    if test -f "$FILE"; then
+                            SIZE=$(ls -l $FILE | cut -f5 -d " ")
+                    fi
+            echo "FILE=$FILE"
+            
+            # Test if previous file is in the SHARE directory and save its size
+            	FILE=$CYLC_SUITE_SHARE_DIR/$CYLC_TASK_CYCLE_POINT/model/b.txt
+            	if test -f "$FILE"; then
+            		SIZE=$(ls -l $FILE | cut -f5 -d " ")
+            	fi
+            echo "FILE=$FILE"
+            
+            # If the size is less than equal to the mean of all files,
+            # set BROADCAST to 1 and send the next file to SHARE
+            
+            #	MEAN=$(< $CYLC_SUITE_RUN_DIR/post/mean.txt)
+            	echo "SIZE=$SIZE"
+            	MEAN=9000
+            
+            	if [[ $SIZE -lt $MEAN ]]; then
+            		BROADCAST=1
+            	fi
+            	echo "BROADCAST=$BROADCAST"
+                    NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
+            	# echo "NEXT_CYCLE = $NEXT_CYCLE"
+            	if [[ $BROADCAST == 1 ]]; then
+            	    cylc broadcast -n 'model' -s "[environment]VAR_DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model" "${CYLC_SUITE_NAME}"
+            echo "DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model"
+            	else
+            	            cylc broadcast -n 'model' -s "[environment]VAR_DIR=$CYLC_SUITE_WORK_DIR/$NEXT_CYCLE/model" "${CYLC_SUITE_NAME}"
+            	fi
+        """
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True
+    [[stop]]
+        script = sleep 1
+        [[[events]]]
+        [[[remote]]]
+        [[[job]]]
+            shell = /bin/bash
+            batch system = background
+        [[[suite state polling]]]
+        [[[environment filter]]]
+        [[[meta]]]
+            URL = 
+            description = 
+            title = 
+        [[[simulation]]]
+            time limit buffer = PT10S
+            fail try 1 only = True
+            default run length = PT10S
+            disable task event handlers = True

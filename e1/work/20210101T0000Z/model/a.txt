@@ -1,5 +1,5 @@
 &input_data
-  filename = '',
+  filename = 'filename_ab.txt',
   varname = 'u',
   varname_xios = 'u',
 /

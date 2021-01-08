@@ -1,0 +1,63 @@
+2021-01-08T18:01:44Z INFO - Suite server: url=https://cylc1.jasmin.ac.uk:43076/ pid=16787
+2021-01-08T18:01:44Z INFO - Run: (re)start=0 log=1
+2021-01-08T18:01:44Z INFO - Cylc version: 7.8.6
+2021-01-08T18:01:44Z INFO - Run mode: live
+2021-01-08T18:01:44Z INFO - Initial point: 20210101T0000Z
+2021-01-08T18:01:44Z INFO - Final point: 20220101T0000Z
+2021-01-08T18:01:44Z INFO - Cold Start 20210101T0000Z
+2021-01-08T18:01:45Z INFO - [prep.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:01:46Z INFO - [prep.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:01:45Z for job(01)
+2021-01-08T18:01:46Z INFO - [prep.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:47Z INFO - [prep.20210101T0000Z] status=submitted: (received)started at 2021-01-08T18:01:46Z for job(01)
+2021-01-08T18:01:47Z INFO - [prep.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:48Z INFO - [prep.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T18:01:47Z for job(01)
+2021-01-08T18:01:49Z INFO - [model.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:01:50Z INFO - [model.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:01:49Z for job(01)
+2021-01-08T18:01:50Z INFO - [model.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:51Z INFO - [model.20210101T0000Z] status=submitted: (received)started at 2021-01-08T18:01:50Z for job(01)
+2021-01-08T18:01:51Z INFO - [model.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:52Z INFO - [model.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T18:01:51Z for job(01)
+2021-01-08T18:01:53Z INFO - [post.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:01:54Z INFO - [post.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:01:53Z for job(01)
+2021-01-08T18:01:54Z INFO - [post.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:55Z INFO - [post.20210101T0000Z] status=submitted: (received)started at 2021-01-08T18:01:54Z for job(01)
+2021-01-08T18:01:55Z INFO - [post.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:01:59Z INFO - [post.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T18:01:57Z for job(01)
+2021-01-08T18:02:00Z INFO - [broadcast-test.20210101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:02:01Z INFO - [broadcast-test.20210101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:02:00Z for job(01)
+2021-01-08T18:02:01Z INFO - [broadcast-test.20210101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:02Z INFO - [broadcast-test.20210101T0000Z] status=submitted: (received)started at 2021-01-08T18:02:01Z for job(01)
+2021-01-08T18:02:02Z INFO - [broadcast-test.20210101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:02Z INFO - [client-command] put_broadcast lucy@cylc1.jasmin.ac.uk:cylc-broadcast eaf7900b-8b28-4c27-be63-ae8cf573cba7
+2021-01-08T18:02:02Z INFO - Broadcast set:
+	+ [model.*] [environment]VAR_DIR=/home/users/lucy/cylc-run/e1/work/20220101T0000Z/model
+2021-01-08T18:02:03Z INFO - [broadcast-test.20210101T0000Z] status=running: (received)succeeded at 2021-01-08T18:02:02Z for job(01)
+2021-01-08T18:02:04Z INFO - [model.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:02:05Z INFO - [model.20220101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:02:04Z for job(01)
+2021-01-08T18:02:05Z INFO - [model.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:06Z INFO - [model.20220101T0000Z] status=submitted: (received)started at 2021-01-08T18:02:05Z for job(01)
+2021-01-08T18:02:06Z INFO - [model.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:07Z INFO - [model.20220101T0000Z] status=running: (received)succeeded at 2021-01-08T18:02:06Z for job(01)
+2021-01-08T18:02:08Z INFO - [stop.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:02:08Z INFO - [post.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:02:09Z INFO - [post.20220101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:02:08Z for job(01)
+2021-01-08T18:02:09Z INFO - [post.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:09Z INFO - [stop.20220101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:02:08Z for job(01)
+2021-01-08T18:02:09Z INFO - [stop.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:10Z INFO - [stop.20220101T0000Z] status=submitted: (received)started at 2021-01-08T18:02:09Z for job(01)
+2021-01-08T18:02:10Z INFO - [stop.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:10Z INFO - [post.20220101T0000Z] status=submitted: (received)started at 2021-01-08T18:02:09Z for job(01)
+2021-01-08T18:02:10Z INFO - [post.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:11Z INFO - [stop.20220101T0000Z] status=running: (received)succeeded at 2021-01-08T18:02:10Z for job(01)
+2021-01-08T18:02:16Z INFO - [post.20220101T0000Z] status=running: (received)succeeded at 2021-01-08T18:02:15Z for job(01)
+2021-01-08T18:02:17Z INFO - [broadcast-test.20220101T0000Z] -submit-num=01, owner@host=cylc1.jasmin.ac.uk
+2021-01-08T18:02:18Z INFO - [broadcast-test.20220101T0000Z] status=ready: (internal)submitted at 2021-01-08T18:02:17Z for job(01)
+2021-01-08T18:02:18Z INFO - [broadcast-test.20220101T0000Z] -health check settings: submission timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:19Z INFO - [broadcast-test.20220101T0000Z] status=submitted: (received)started at 2021-01-08T18:02:18Z for job(01)
+2021-01-08T18:02:19Z INFO - [broadcast-test.20220101T0000Z] -health check settings: execution timeout=None, polling intervals=PT1H,...
+2021-01-08T18:02:19Z INFO - [client-command] put_broadcast lucy@cylc1.jasmin.ac.uk:cylc-broadcast 3148b68f-89ce-47b5-be41-a5fe2b0c8d05
+2021-01-08T18:02:19Z INFO - Broadcast set:
+	+ [model.*] [environment]VAR_DIR=/home/users/lucy/cylc-run/e1/work/20230101T0000Z/model
+2021-01-08T18:02:20Z INFO - [broadcast-test.20220101T0000Z] status=running: (received)succeeded at 2021-01-08T18:02:19Z for job(01)
+2021-01-08T18:02:20Z INFO - Suite shutting down - AUTOMATIC
+2021-01-08T18:02:20Z INFO - DONE

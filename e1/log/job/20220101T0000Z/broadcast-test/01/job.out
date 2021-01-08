@@ -1,0 +1,12 @@
+Suite    : e1
+Task Job : 20220101T0000Z/broadcast-test/01 (try 1)
+User@Host: lucy@cylc1.jasmin.ac.uk
+
+FILE=/home/users/lucy/cylc-run/e1/work/20220101T0000Z/model/b.txt
+FILE=/home/users/lucy/cylc-run/e1/share/20220101T0000Z/model/b.txt
+SIZE=9972
+BROADCAST=0
+2021-01-08T18:02:18Z INFO - started
+Broadcast set:
++ [model.*] [environment]VAR_DIR=/home/users/lucy/cylc-run/e1/work/20230101T0000Z/model
+2021-01-08T18:02:19Z INFO - succeeded

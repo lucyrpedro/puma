@@ -1,0 +1,51 @@
+[Task 1]
+	[[inputs]]
+
+		topography = "xxxxxxxxx"
+		checkpoint = "xxxxxxxxx"
+		init = "xxxxxxxxxxxxxxx"
+
+	[[outputs]]
+
+		[[[/home/users/lucy/cylc-run/e1/work/20210101T0000Z/model/a.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 85
+			precision.absolute_tolerance = xxx
+		[[[/home/users/lucy/cylc-run/e1/work/20210101T0000Z/model/b.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 13122
+			precision.absolute_tolerance = xxx
+		[[[/home/users/lucy/cylc-run/e1/work/20210101T0000Z/model/ab-out.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 85
+			precision.absolute_tolerance = xxx
+		[[[/home/users/lucy/cylc-run/e1/work/20220101T0000Z/model/a.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 85
+			precision.absolute_tolerance = xxx
+		[[[/home/users/lucy/cylc-run/e1/work/20220101T0000Z/model/b.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 9972
+			precision.absolute_tolerance = xxx
+		[[[/home/users/lucy/cylc-run/e1/work/20220101T0000Z/model/ab-out.txt]]]
+			pattern = xxxxxxxx
+			lifetime = xxxxxxx
+			type = xxxxxxxxxxx
+			datatype = xxxxxxx
+			size = 85
+			precision.absolute_tolerance = xxx

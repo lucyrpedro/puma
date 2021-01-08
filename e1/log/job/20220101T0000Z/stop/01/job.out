@@ -1,0 +1,6 @@
+Suite    : e1
+Task Job : 20220101T0000Z/stop/01 (try 1)
+User@Host: lucy@cylc1.jasmin.ac.uk
+
+2021-01-08T18:02:09Z INFO - started
+2021-01-08T18:02:10Z INFO - succeeded

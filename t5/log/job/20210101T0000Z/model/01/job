@@ -1,0 +1,56 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: t5
+# Task: model.20210101T0000Z
+# Job log directory: 20210101T0000Z/model/01
+# Job submit method: background
+export CYLC_DIR='/apps/jasmin/metomi/cylc-7.8.6'
+export CYLC_VERSION='7.8.6'
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="20220101T0000Z"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="20210101T0000Z"
+    export CYLC_SUITE_NAME="t5"
+    export CYLC_UTC="False"
+    export CYLC_VERBOSE="false"
+
+    export CYLC_SUITE_RUN_DIR="/home/users/lucy/cylc-run/t5"
+    export CYLC_SUITE_DEF_PATH="${HOME}/puma/mock-example/eios"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/users/lucy/puma/mock-example/eios"
+    export CYLC_SUITE_UUID="f3d7c771-2dd4-40c1-afbe-2938209e3862"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="20210101T0000Z/model/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root model"
+    export CYLC_TASK_DEPENDENCIES="prep.20210101T0000Z"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export SCRIPT_NAME_MODEL VAR_A VAR_B FILE VAR_DIR
+    SCRIPT_NAME_MODEL="script-model.sh"
+    VAR_A="a"
+    VAR_B="b"
+    FILE="filename_ab.txt"
+    VAR_DIR="$CYLC_TASK_WORK_DIR"
+}
+
+cylc__job__inst__pre_script() {
+# PRE-SCRIPT:
+create-share-dir.sh
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+${SCRIPT_NAME_MODEL};
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 20210101T0000Z/model/01
