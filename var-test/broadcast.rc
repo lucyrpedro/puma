@@ -1,0 +1,7 @@
+#!jinja2
+# {% set NEXT_CYCLE='$(cylc cycle-point --offset-years=1)' %}
+
+[environment]
+	NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
+        VAR_DIR=$CYLC_SUITE_WORK_DIR/${NEXT_CYCLE}
+        # VAR_DIR=$CYLC_SUITE_WORK_DIR/{{NEXT_CYCLE}}

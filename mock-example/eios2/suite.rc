@@ -1,0 +1,43 @@
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2023
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = prep => model => post => broadcast-test => update
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] & broadcast-test[-P1Y] => model => post => broadcast-test => update
+    [[[R1/P0Y]]]  # Final cycle point.
+      graph = model => stop
+
+[runtime]
+  [[root]]  # Inherited by all tasks.
+    script = sleep 1
+  [[prep]]
+   script = copy-files-post.sh
+  [[model]]
+   pre-script = create-share-dir.sh
+   script = ${SCRIPT_NAME_MODEL};
+    [[[environment]]]
+      SCRIPT_NAME_MODEL = script-model.sh
+      VAR_A = a			# common file
+      VAR_B = b		# file that will be used in the decision-making
+      FILE = filename_ab.txt 	# common file
+      VAR_DIR = $CYLC_TASK_WORK_DIR
+  [[post]]
+    script = run-script-create-io-cylc.sh
+  [[broadcast-test]]
+     script = test-file.sh
+  [[update]]
+    # script = update-files.sh
+[visualization]
+  initial cycle point = 2021
+  final cycle point = 2022
+    [[node attributes]]
+        prep = "color=orange"
+        model = "color=blue"
+        post = "color=green3"
+        broadcast-test = "color=red"

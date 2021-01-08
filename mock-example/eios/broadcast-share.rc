@@ -1,0 +1,3 @@
+[environment]
+	NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
+        VAR_DIR=$CYLC_SUITE_SHARE_DIR/${NEXT_CYCLE}/model
