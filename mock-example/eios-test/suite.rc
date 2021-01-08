@@ -1,0 +1,81 @@
+[meta]
+  title = test suite
+  description = first suite
+# This is what my suite does:...
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2022
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = prep => model => post => broadcast-test
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] & broadcast-test[-P1Y] => model => post => broadcast-test
+    [[[R1/P0Y]]]  # Final cycle point.
+      graph = model => stop
+
+[runtime]
+  [[root]]  # Inherited by all tasks.
+    script = sleep 1
+  [[prep]]
+   script = copy-files-post.sh
+  [[model]]
+   pre-script = create-share-dir.sh
+   script = ${SCRIPT_NAME_MODEL};
+    [[[environment]]]
+      SCRIPT_NAME_MODEL = script-model.sh
+      VAR_A = a
+      VAR_B = b
+      FILE = filename_ab.txt
+      VAR_DIR = $CYLC_TASK_WORK_DIR
+  [[post]]
+    script = run-script-create-io-cylc.sh
+  [[broadcast-test]]
+     script = """
+
+# BROADCAST=0 => the file is placed in the WORK directory
+# BROADCAST=1 => the file is placed in the SHARE directory
+	BROADCAST=0
+
+# Test if previous file is in the WORK directory and save its size
+        FILE=$CYLC_SUITE_WORK_DIR/$CYLC_TASK_CYCLE_POINT/model/b.txt
+        if test -f "$FILE"; then
+                SIZE=$(ls -l $FILE | cut -f5 -d " ")
+        fi
+echo "FILE=$FILE"
+
+# Test if previous file is in the SHARE directory and save its size
+	FILE=$CYLC_SUITE_SHARE_DIR/$CYLC_TASK_CYCLE_POINT/model/b.txt
+	if test -f "$FILE"; then
+		SIZE=$(ls -l $FILE | cut -f5 -d " ")
+	fi
+echo "FILE=$FILE"
+
+# If the size is less than equal to the mean of all files, 
+# set BROADCAST to 1 and send the next file to SHARE
+
+#	MEAN=$(< $CYLC_SUITE_RUN_DIR/post/mean.txt)
+#	echo "DIR=$CYLC_SUITE_RUN_DIR/post/calc-mean.sh"
+	echo "SIZE=$SIZE"
+	MEAN=9000
+
+	if [[ $SIZE -lt $MEAN ]]; then
+		BROADCAST=1
+	fi
+	echo "BROADCAST=$BROADCAST"
+        NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
+	# echo "NEXT_CYCLE = $NEXT_CYCLE"
+	if [[ $BROADCAST == 1 ]]; then
+	    cylc broadcast -n 'model' -s "[environment]VAR_DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model" "${CYLC_SUITE_NAME}"
+echo "DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model"
+	else
+	            cylc broadcast -n 'model' -s "[environment]VAR_DIR=$CYLC_SUITE_WORK_DIR/$NEXT_CYCLE/model" "${CYLC_SUITE_NAME}"
+	fi
+	"""
+[visualization]
+  initial cycle point = 2021
+  final cycle point = 2022
+    [[node attributes]]
+        prep = "color=orange"
+        model = "color=blue"
+        post = "color=green3"
+        broadcast-test = "color=red"
