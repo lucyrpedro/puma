@@ -10,7 +10,7 @@
 
 # Find the size of the file
 
-	FILE=$CYLC_SUITE_WORK_DIR/$CYLC_TASK_CYCLE_POINT/model/b.txt
+	FILE=$CYLC_SUITE_WORK_DIR/$CYLC_TASK_CYCLE_POINT/model/a.txt
 	SIZE=$(ls -l $FILE | cut -f5 -d " ")
 
 # If the size is bigger than a THRESHOLD,

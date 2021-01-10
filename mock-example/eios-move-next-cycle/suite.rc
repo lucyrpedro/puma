@@ -6,42 +6,36 @@
   final cycle point = 2030
   [[dependencies]]
     [[[R1]]]  # Initial cycle point.
-      graph = prep => model => post => broadcast-test => broadcast-action
+      graph = model => broadcast-test => broadcast-action
     [[[R//P1Y]]]  # Yearly cycling.
-      graph = model[-P1Y] & broadcast-action[-P1Y] => model => post => broadcast-test => broadcast-action
+      graph = model[-P1Y] & broadcast-action[-P1Y] => model => broadcast-test => broadcast-action
     [[[R1/P0Y]]]  # Final cycle point.
-      graph = model => stop
+      graph = broadcast-action => stop
 
 [runtime]
-  [[root]]  # Inherited by all tasks.
-    script = true
-  [[prep]]
-   script = copy-files-post.sh
   [[model]]
    pre-script = create-share-dir.sh
    script = ${SCRIPT_NAME_MODEL};
     [[[environment]]]
       SCRIPT_NAME_MODEL = script-model.sh
       VAR_A = a
-      VAR_B = b
-      FILE = filename_ab.txt
       VAR_DIR = $CYLC_TASK_WORK_DIR 
 	# Definition for the first cycle; not required in general. 
 	# It can be defined directly in the broadcast task.
-  [[post]]
-    script = run-script-create-io-cylc.sh
   [[broadcast-test]]
     script = test-size-next.sh
   [[broadcast-action]]
     script = ${SCRIPT_NAME};
     [[[environment]]]
       SCRIPT_NAME = true
+  [[stop]]
+    script = true
 [visualization]
   initial cycle point = 2021
-  final cycle point = 2025
+  final cycle point = 2023
     [[node attributes]]
-        prep = "color=orange"
         model = "color=blue"
-        post = "color=green3"
-        broadcast-test = "color=red"
+        broadcast-test = "color=green3"
+        broadcast-action = "color=red"
+	stop = "color=orange" # Appears only if the final cycle point matches.
 

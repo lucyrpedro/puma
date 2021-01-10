@@ -1,3 +1,0 @@
-[environment]
-	VAR_DIR=$CYLC_SUITE_SHARE_DIR/$NEXT_CYCLE/model
-
