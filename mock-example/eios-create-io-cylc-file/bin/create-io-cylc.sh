@@ -1,10 +1,8 @@
 #!/bin/bash
-input="files.txt"
-rm -rf io.cylc
-rm -rf files-size.txt
-# export total=0
 
-cat >> io.cylc << EOF
+rm -rf io.cylc
+
+cat >> io.cylc.${CYLC_TASK_CYCLE_POINT} << EOF
 [Task 1]
 	[[inputs]]
 
@@ -16,9 +14,13 @@ cat >> io.cylc << EOF
 
 EOF
 
+input="files.txt.${CYLC_TASK_CYCLE_POINT}"
+
 while IFS= read -r line
 do
   echo "$line"
-#  echo "$total"
   ./add-file.sh $line
-done
+done < "$input"
+# done
+
+sleep 1

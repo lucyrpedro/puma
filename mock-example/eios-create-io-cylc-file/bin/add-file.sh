@@ -9,8 +9,10 @@ then
 	echo "FILENAME = $FILENAME"
 	exit 1
 fi
+
+size=$(ls -l $FILENAME | cut -f5 -d " ")
 	
-cat >> io.cylc << EOF
+cat >> io.cylc.${CYLC_TASK_CYCLE_POINT} << EOF
 		[[[$FILENAME]]]
 			pattern = xxxxxxxx
 			lifetime = xxxxxxx
