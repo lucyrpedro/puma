@@ -1,7 +1,6 @@
 [meta]
-  title = test suite
-  description = first suite
-# This is what my suite does:...
+  title = Next Cycle
+  description = Change the suite's next cycle based on the size of a specific file (b.txt, created in task model) 
 [scheduling]
   initial cycle point = 2021
   final cycle point = 2030
@@ -9,7 +8,7 @@
     [[[R1]]]  # Initial cycle point.
       graph = prep => model => post => broadcast-test => broadcast-action
     [[[R//P1Y]]]  # Yearly cycling.
-      graph = model[-P1Y] & broadcast-test[-P1Y] => model => post => broadcast-test => broadcast-action
+      graph = model[-P1Y] & broadcast-action[-P1Y] => model => post => broadcast-test => broadcast-action
     [[[R1/P0Y]]]  # Final cycle point.
       graph = model => stop
 
@@ -32,7 +31,7 @@
   [[post]]
     script = run-script-create-io-cylc.sh
   [[broadcast-test]]
-    script = test-size.sh
+    script = test-size-next.sh
   [[broadcast-action]]
     script = ${SCRIPT_NAME};
     [[[environment]]]

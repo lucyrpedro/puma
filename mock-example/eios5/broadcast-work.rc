@@ -1,0 +1,3 @@
+[environment]
+	VAR_DIR=$CYLC_SUITE_WORK_DIR/$NEXT_CYCLE/model
+
