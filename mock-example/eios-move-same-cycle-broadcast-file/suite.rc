@@ -1,6 +1,6 @@
 [meta]
-  title = Next Cycle
-  description = Change the suite's next cycle based on the size of a specific file (b.txt, created in task model) 
+  title = Same Cycle
+  description = Change the suite's file placement based on the size of a specific file. The file is written into WORK directory and it may be moved to SHARE directory. 
 [scheduling]
   initial cycle point = 2021
   final cycle point = 2030
@@ -23,7 +23,7 @@
 	# Definition for the first cycle; not required in general. 
 	# It can be defined directly in the broadcast task.
   [[broadcast-test]]
-    script = test-size-next.sh
+    script = test-size.sh
   [[broadcast-action]]
     script = ${SCRIPT_NAME};
     [[[environment]]]

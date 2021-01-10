@@ -10,7 +10,7 @@
     [[[R//P1Y]]]  # Yearly cycling.
       graph = model[-P1Y] & broadcast-action[-P1Y] => model => broadcast-test => broadcast-action
     [[[R1/P0Y]]]  # Final cycle point.
-      graph = model => stop
+      graph = broadcast-action => stop
 
 [runtime]
   [[model]]
@@ -28,12 +28,14 @@
     script = ${SCRIPT_NAME};
     [[[environment]]]
       SCRIPT_NAME = true
+  [[stop]]
+    script = true
 [visualization]
   initial cycle point = 2021
-  final cycle point = 2025
+  final cycle point = 2023
     [[node attributes]]
-        prep = "color=orange"
         model = "color=blue"
-        post = "color=green3"
-        broadcast-test = "color=red"
+        broadcast-test = "color=green3"
+        broadcast-action = "color=red"
+	stop = "color=orange" # Appears only if the final cycle point matches.
 
