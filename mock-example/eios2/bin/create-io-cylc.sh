@@ -21,4 +21,4 @@ do
   echo "$line"
 #  echo "$total"
   ./add-file.sh $line
-done < "$input"
+done

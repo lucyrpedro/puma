@@ -1,5 +1,0 @@
-&input_data
-  filename = '',
-  varname = 'u',
-  varname_xios = 'u',
-/

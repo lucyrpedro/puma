@@ -2,5 +2,5 @@
 
 cd $CYLC_SUITE_RUN_DIR/post
 
-. list_files.sh
+. list-files.sh
 . create-io-cylc.sh

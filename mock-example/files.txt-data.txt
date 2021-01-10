@@ -1,1 +1,0 @@
--rw-r--r-- 1 lucy users 691 Dec  6 19:50 ./files.txt

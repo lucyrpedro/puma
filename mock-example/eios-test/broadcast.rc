@@ -1,5 +1,0 @@
-[environment]
-      VAR_A = aaa
-      VAR_B = bbb
-      FILE = filenamefff.txt
-      VAR_DIR = $CYLC_SUITE_SHARE_DIR
