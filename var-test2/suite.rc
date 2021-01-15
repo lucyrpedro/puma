@@ -1,0 +1,21 @@
+[scheduling]
+  initial cycle point = 2021
+  final cycle point = 2023
+  [[dependencies]]
+    [[[R1]]]  # Initial cycle point.
+      graph = model => broadcast-test
+    [[[R//P1Y]]]  # Yearly cycling.
+      graph = model[-P1Y] => model => broadcast-test
+[runtime]
+  [[model]]
+    [[[environment]]]
+      VAR_DIR = $CYLC_TASK_WORK_DIR
+  [[broadcast-test]]
+     script = """
+        NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
+	echo $NEXT_CYCLE > ${CYLC_SUITE_DEF_PATH}/next-cycle.txt
+	. write-broadcast-file.sh
+	# cylc broadcast -n 'model' -s "[environment]VAR_DIR=$CYLC_SUITE_WORK_DIR/$NEXT_CYCLE" "${CYLC_SUITE_NAME}"
+	cylc broadcast -n 'model' -F "${CYLC_SUITE_DEF_PATH}/broadcast.rc" "${CYLC_SUITE_NAME}"
+	"""
+

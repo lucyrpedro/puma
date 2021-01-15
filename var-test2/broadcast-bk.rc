@@ -1,0 +1,2 @@
+[environment]
+        VAR_DIR=$CYLC_SUITE_WORK_DIR/20220101T0000Z
