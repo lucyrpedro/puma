@@ -41,8 +41,10 @@
 
         if [[ $BROADCAST == 1 ]]; then
 		cylc broadcast -n 'broadcast-action' -s "[environment]SCRIPT_NAME=move-file-share.sh" "${CYLC_SUITE_NAME}"
+		. write-broadcast-share.sh
         else
 		cylc broadcast -n 'broadcast-action' -s "[environment]SCRIPT_NAME=move-file-work.sh" "${CYLC_SUITE_NAME}"
+		. write-broadcast-work.sh
         fi
 
 # Here we don't need to specify the cycle because the conditional is updated in every cycle.

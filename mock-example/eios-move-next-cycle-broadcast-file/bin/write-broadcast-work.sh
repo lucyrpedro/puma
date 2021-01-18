@@ -6,7 +6,8 @@
 NEXT_CYCLE=$(cylc cycle-point --offset-years=1)
 
 # Create broadcast.rc file
-cat > ${CYLC_SUITE_DEF_PATH}/broadcast.rc << EOF
+
+cat > ${CYLC_SUITE_DEF_PATH}/broadcast-work.rc << EOF
 [environment]
-        VAR_DIR=$CYLC_SUITE_WORK_DIR/${NEXT_CYCLE}
+        VAR_DIR=$CYLC_SUITE_WORK_DIR/${NEXT_CYCLE}/model
 EOF
